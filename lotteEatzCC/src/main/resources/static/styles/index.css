@@ -1,0 +1,11 @@
+.all-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-direction: column;
+}
+ol, ul, nav {
+    list-style: none;
+}
+html, body {
+    font-family: "Pretendard", "SF Pro Display", AppleSDGothicNeo-Light, Helvetica, "Malgun Gothic", "MalgunGothic", "맑은고딕", sans-serif !important;}

@@ -108,7 +108,7 @@
 				</ul>
 				<button type="button" class="order-btn"></button>
 			</div>
-			<div class="sub-gnb-layer">
+			<!-- <div class="sub-gnb-layer">
 				<div class="swiper-container-wrap swiper-common-banner">
 					<div class="swiper-container">
 						<ul class="swiper-wrapper">
@@ -120,9 +120,23 @@
 						<button type="button" class="swiper-button-next"></button>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+		  var buttons = document.querySelectorAll('.header-deq2-btn');
+		  var headerWrapper = document.querySelector('.header-wrapper');
+		  buttons.forEach(function(button) {
+			button.addEventListener('mouseenter', function() {
+			  headerWrapper.classList.add('show-sub-gnb');
+			});
+			button.addEventListener('mouseleave', function() {
+			  headerWrapper.classList.remove('show-sub-gnb');
+			});
+		  });
+		});
+	  </script>
 </body>
 
 </html>

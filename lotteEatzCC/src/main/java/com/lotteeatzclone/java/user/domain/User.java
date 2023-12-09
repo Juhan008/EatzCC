@@ -1,27 +1,58 @@
 package com.lotteeatzclone.java.user.domain;
 
-import java.sql.Date;
-import java.sql.Timestamp;
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
-@Data
-@AllArgsConstructor
+@Entity
+@Table(name = "users_Table")
+@Getter
+@Setter
 @NoArgsConstructor
-@RequiredArgsConstructor
 public class User {
-  private int id;
-  @NonNull
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+
+  @Column(name = "name", nullable = false, length = 30)
   private String name;
-  @NonNull
+
+  @Column(name = "phone", nullable = false, length = 50)
   private String phone;
-  @NonNull
+
+  @Column(name = "userId", nullable = false, length = 20)
   private String userId;
-  @NonNull
+
+  @Column(name = "password", nullable = false, length = 30)
   private String password;
-  private Date birth;
-  private Timestamp createdAt;
+
+  @Column(name = "birth", nullable = false)
+  private LocalDate birth;
+
+  @Column(name = "createdAt", columnDefinition = "TIMESTAMP DEFAULT SYSDATE")
+  private LocalDateTime createdAt;
+
+  @Column(name = "member", length = 20)
+  private String member;
+
+  public User(Long id, String name, String phone, String userId, String password, LocalDate birth,
+      LocalDateTime createdAt) {
+    this.id = id;
+    this.name = name;
+    this.phone = phone;
+    this.userId = userId;
+    this.password = password;
+    this.birth = birth;
+    this.createdAt = createdAt;
+    this.member = member;
+  }
 }

@@ -20,6 +20,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     text-align: right;
     flex-direction: row-reverse;
 }
+.header-bottom{
+    display: flex;
+}
 .user-menu{
     display: flex;
     flex-direction: row-reverse;
@@ -56,3 +59,84 @@ hr {
     border: none;
     margin: 0%;
 }
+.header-deq1 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .header-deq2-li {
+    position: relative;
+    margin-right: 20px;
+  }
+  
+  .header-deq2-btn {
+    background: none;
+    border: none;
+    cursor: pointer;  
+    color: #000;
+    width: 117px;
+    display: block;
+    padding: 12px 0;
+    vertical-align: top;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.025em;
+    font-weight: 600;
+    text-align: left;
+  }
+  
+  .header-deq2-btn:hover {
+    color: #49a3b6;
+  }
+  
+  .header-dep3-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 1000;
+  }
+  .header-deq1:hover .header-dep3-menu {
+    display: block;
+  }
+  .header-deq2-li:hover .header-dep3-menu {
+    display: block;
+  }
+  .header-dep3-menu li a {
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    
+  }
+  .header-deq2-btn, .header-dep3-menu a {
+    color: #000;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    transition: color 0.14s ease-in;
+  }
+  .header-dep3-menu li a:hover {
+    color: #49a3b6;
+  }
+  .header-wrapper {
+    transition: height 0.14s ease-in;
+  }
+  
+  .header-wrapper.show-sub-gnb {
+    height: 398px;
+    box-shadow: 0 5px 5px -5px #333;;
+  }
+  @keyframes opacityActive {
+    to {
+      opacity: 1;
+    }
+  }
+
+  .header-wrapper.show-sub-gnb-sub-gnb-layer {
+    animation: opacityActive 0.14s ease-in forwards;
+    }

@@ -1,29 +1,25 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>어드민 페이지</title>
-    <link rel="stylesheet" href="/styles/admin.css" />
-  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOTTE Eatz 관리자 페이지</title>
+    <link rel="stylesheet" href="/static/styles/admin.css">
 </head>
-
 <body>
-    <div class="root">
-        <div class="wapper">
-            <div class="lnb-wapper">
-                <div class="lnb-menu"><a href="/admin/munuadd">메뉴 등록</a></div>
-                <div class="lnb-menu"><a href="/admin/menumanage">메뉴정보 관리</a></div>
-                <div class="lnb-menu"><a href="/admin/productadd">상품 등록</a></div>
-                <div class="lnb-menu"><a href="/admin/productmanage">상품정보 관리</a></div>
-                <div class="lnb-menu"><a href="/admin/storeadd">매장 등록</a></div>
-                <div class="lnb-menu"><a href="/admin/storemanage">매장정보 관리</a></div>
-            </div>
-            <div class="context">
-
-            </div>
-        </div>
+    <div class="sidebar">
+        <div class="logo">LOTTE Eatz</div>
+        <ul class="menu">
+            <li class="menu-item" onclick="changeActiveMenu(this)">회원 목록</li>
+            <li class="menu-item" onclick="changeActiveMenu(this)">메뉴 등록</li>
+            <li class="menu-item" onclick="changeActiveMenu(this)">메뉴정보 관리</li>
+            <li class="menu-item" onclick="changeActiveMenu(this)">상품 등록</li>
+            <li class="menu-item" onclick="changeActiveMenu(this)">상품정보 관리</li>
+            <li class="menu-item" onclick="changeActiveMenu(this)">매장 등록</li>
+            <li class="menu-item" onclick="changeActiveMenu(this)">매장정보 관리</li>
+            <li class="menu-item" onclick="changeActiveMenu(this)">상담 관리</li>
+        </ul>
     </div>
+    <script src="/static/scripts/admin.js"></script>
 </body>
-
 </html>

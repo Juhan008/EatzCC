@@ -6,6 +6,11 @@ DROP TABLE myCoupon_Table CASCADE CONSTRAINTS;
 DROP TABLE myStore_Table CASCADE CONSTRAINTS;
 DROP TABLE myMenu_Table CASCADE CONSTRAINTS;
 DROP TABLE event_Table CASCADE CONSTRAINTS;
+DROP TABLE productsCategory_Table CASCADE CONSTRAINTS;
+DROP TABLE products_Table CASCADE CONSTRAINTS;
+DROP TABLE notice_Table CASCADE CONSTRAINTS;
+DROP TABLE faq_Table CASCADE CONSTRAINTS;
+DROP TABLE movie_Table CASCADE CONSTRAINTS;
 
 create table users_Table (
     "id" number generated as identity primary key,
@@ -67,6 +72,30 @@ create table menu_Table (
    	"allergy" VARCHAR2(200),
    	"origin" VARCHAR2(200)
 );
+create table productsCategory_Table (
+    "id" number generated as identity primary key,
+   	"majorTitle" VARCHAR2(50) NOT NULL,
+	"subTitle" VARCHAR2(50) NOT NULL,   	
+   	"brand" VARCHAR2(20) NOT NULL
+);
+
+create table products_Table (
+    "id" number generated as identity primary key,
+   	"categorySubTitle" VARCHAR2(50) NOT NULL,
+   	"productName" VARCHAR2(100) NOT NULL,
+   	"subTitle" VARCHAR2(100) NOT NULL,
+   	"image" VARCHAR2(200) NOT NULL,
+   	"regularPrice" NUMBER(10)
+    "discountPrice" NUMBER(10)
+   	"discountInfo" VARCHAR2(500)
+   	"productInfo" VARCHAR2(3000),
+   	"productNotice" VARCHAR2(3000),
+   	"deliveryNotice" VARCHAR2(3000),
+   	"orderIndex" number(10) NOT NULL,
+   	"mainDisplay" CHAR(1),
+   	"suggestion" CHAR(1),
+   	constraint fk_subtitle_id_Category foreign key ("subTitle") references productsCategory_Table("id")
+);
 
 create table myCoupon_Table (
     "user_id" NUMBER NOT NULL,
@@ -103,3 +132,29 @@ create table event_Table (
  	"mainTopImage" VARCHAR2(200),
  	"mainTopModalImage" VARCHAR2(200)
 );
+
+create table notice_Table (
+    "id" number generated as identity primary key,
+   	"brand" VARCHAR2(20) NOT NULL,
+   	"title" VARCHAR2(30) NOT NULL,
+   	"description" VARCHAR2(2000) NOT NULL,
+	"createdAt" timestamp default sysdate,
+);
+
+create table faq_Table (
+    "id" number generated as identity primary key,
+    "brand" VARCHAR2(20) NOT NULL,
+   	"question" VARCHAR2(200) NOT NULL,
+   	"answer" VARCHAR2(200) NOT NULL,
+   	"orderIndex" number(10) NOT NULL,
+);
+
+create table movie_Table (
+    "id" number generated as identity primary key,
+    "brand" VARCHAR2(20) NOT NULL,
+   	"title" VARCHAR2(200) NOT NULL,
+   	"url" VARCHAR2(200) NOT NULL,
+   	"createdAt" timestamp default sysdate,
+   	"mainDisplay" CHAR(1),
+);
+

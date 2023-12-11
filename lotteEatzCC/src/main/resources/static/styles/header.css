@@ -19,13 +19,23 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     margin: 0 auto;
     text-align: right;
     flex-direction: row-reverse;
-}
-.header-bottom{
+  }
+  .header-bottom {
+    z-index: 2;
+    position: relative;
+    max-width: 1150px;
+    height: 90px;
+    padding: 0 20px;
+    margin: 0 auto;
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
 }
-.user-menu{
-    display: flex;
-    flex-direction: row-reverse;
+.user-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 .user-menu .user-item{
     display: inline-block;
@@ -64,6 +74,8 @@ hr {
     padding: 0;
     margin: 0;
     display: flex;
+    margin-left: 60px;
+    font-size: 0;
   }
   
   .header-deq2-li {
@@ -90,7 +102,14 @@ hr {
   .header-deq2-btn:hover {
     color: #49a3b6;
   }
-  
+.header-logo{
+    display: block;
+    padding: 10px 0;
+    background: url(/images/webdevelop/comm_header_logo.svg) center no-repeat;
+    background-size: 72px 40px;
+    width: 72px;
+    height: 60px;
+}
   .header-dep3-menu {
     display: none;
     position: absolute;
@@ -98,6 +117,7 @@ hr {
     right: 0;
     background-color: #fff;
     z-index: 1000;
+    padding: 20px 0 0 0;
   }
   .header-deq1:hover .header-dep3-menu {
     display: block;
@@ -115,7 +135,7 @@ hr {
   }
   .header-deq2-btn, .header-dep3-menu a {
     color: #000;
-    padding: 10px 15px;
+    padding: 8px 15px;
     text-decoration: none;
     display: block;
     transition: color 0.14s ease-in;

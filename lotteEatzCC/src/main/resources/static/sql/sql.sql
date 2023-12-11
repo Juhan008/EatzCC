@@ -83,11 +83,11 @@ create table products_Table (
     "id" number generated as identity primary key,
    	"categorySubTitle" VARCHAR2(50) NOT NULL,
    	"productName" VARCHAR2(100) NOT NULL,
-   	"subTitle" VARCHAR2(100) NOT NULL,
+   	"subTitle" number,
    	"image" VARCHAR2(200) NOT NULL,
-   	"regularPrice" NUMBER(10)
-    "discountPrice" NUMBER(10)
-   	"discountInfo" VARCHAR2(500)
+   	"regularPrice" NUMBER(10),
+    "discountPrice" NUMBER(10),
+   	"discountInfo" VARCHAR2(500),
    	"productInfo" VARCHAR2(3000),
    	"productNotice" VARCHAR2(3000),
    	"deliveryNotice" VARCHAR2(3000),
@@ -138,7 +138,7 @@ create table notice_Table (
    	"brand" VARCHAR2(20) NOT NULL,
    	"title" VARCHAR2(30) NOT NULL,
    	"description" VARCHAR2(2000) NOT NULL,
-	"createdAt" timestamp default sysdate,
+	"createdAt" timestamp default sysdate
 );
 
 create table faq_Table (
@@ -146,8 +146,8 @@ create table faq_Table (
     "brand" VARCHAR2(20) NOT NULL,
    	"question" VARCHAR2(200) NOT NULL,
    	"answer" VARCHAR2(200) NOT NULL,
-   	"orderIndex" number(10) NOT NULL,
-);
+   	"orderIndex" number(10) NOT NULL
+); 
 
 create table movie_Table (
     "id" number generated as identity primary key,
@@ -155,6 +155,6 @@ create table movie_Table (
    	"title" VARCHAR2(200) NOT NULL,
    	"url" VARCHAR2(200) NOT NULL,
    	"createdAt" timestamp default sysdate,
-   	"mainDisplay" CHAR(1),
+   	"mainDisplay" CHAR(1)
 );
 

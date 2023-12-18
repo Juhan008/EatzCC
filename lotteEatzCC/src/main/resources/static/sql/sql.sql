@@ -1,10 +1,10 @@
-DROP TABLE users_Table CASCADE CONSTRAINTS;
+DROP TABLE users_table CASCADE CONSTRAINTS;
 DROP TABLE coupons_Table CASCADE CONSTRAINTS;
 DROP TABLE store_Table CASCADE CONSTRAINTS;
 DROP TABLE menu_Table CASCADE CONSTRAINTS;
 DROP TABLE myCoupon_Table CASCADE CONSTRAINTS;
 DROP TABLE myStore_Table CASCADE CONSTRAINTS;
-DROP TABLE myMenu_Table CASCADE CONSTRAINTS;
+DROP TABLE myMenu_table CASCADE CONSTRAINTS;
 DROP TABLE event_Table CASCADE CONSTRAINTS;
 DROP TABLE productsCategory_Table CASCADE CONSTRAINTS;
 DROP TABLE products_Table CASCADE CONSTRAINTS;
@@ -12,12 +12,12 @@ DROP TABLE notice_Table CASCADE CONSTRAINTS;
 DROP TABLE faq_Table CASCADE CONSTRAINTS;
 DROP TABLE movie_Table CASCADE CONSTRAINTS;
 
-create table users_Table (
+create table users_table (
     "id" number generated as identity primary key,
     "name" VARCHAR2(30) NOT NULL,
     "phone" VARCHAR2(50) NOT NULL,
-    "userId" VARCHAR2(20) NOT NULL,
-    "password" VARCHAR2(30) NOT NULL,
+    "userId" VARCHAR2(20) NOT NULL unique,
+    "userPassword" VARCHAR2(1000) NOT NULL,
     "birth" DATE NOT NULL,
     "createdAt" timestamp default sysdate,
     "member" VARCHAR2(20)
@@ -57,18 +57,18 @@ create table store_Table (
    	"MinimumAmount" number(7) NOT NULL,
    	"available" CHAR(1)
 );
-create table menu_Table (
+create table menu_table (
     "id" number generated as identity primary key,
-   	"menuName" VARCHAR2(200) NOT NULL,
+   	"menu_name" VARCHAR2(200) NOT NULL,
    	"brand" VARCHAR2(20) NOT NULL,
    	"category" VARCHAR2(20) NOT NULL,
    	"image" VARCHAR2(200) NOT NULL,
-   	"weight" NUMBER(10),
-   	"calories" NUMBER(10),
-   	"protein" NUMBER(10),
-   	"sodium" NUMBER(10),
-   	"sugar" NUMBER(10),
-   	"saturatedFat" NUMBER(10),
+   	"weight" VARCHAR2(200),
+   	"calories" VARCHAR2(200),
+   	"protein" VARCHAR2(200),
+   	"sodium" VARCHAR2(200),
+   	"sugar" VARCHAR2(200),
+   	"saturatedFat" VARCHAR2(200),
    	"allergy" VARCHAR2(200),
    	"origin" VARCHAR2(200)
 );

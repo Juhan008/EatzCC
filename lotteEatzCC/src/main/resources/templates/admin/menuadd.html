@@ -1,10 +1,73 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+<html xmlns:th="http://www.thymeleaf.org">
 
+<head th:insert="~{/admin/adminlnb :: adminlnbFragmentHead}"></head>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <link rel="stylesheet" href="/styles/menuadd.css">
+</head>
+
+<body>
+    <div class="all-wrapper">
+        <div class="contents-wrapper">
+            <div th:insert="~{/admin/adminlnb :: adminlnbFragment}" class="lnb"></div>
+            <div class="contents">
+                <form action="/submitMenu" method="post" enctype="multipart/form-data">
+                    <div class="input-group">
+                        <label class="label-name" for="menuName">메뉴 이름</label>
+                        <input type="text" id="menuName" name="menuName" required>
+                    </div>
+                    <div class="input-group">
+                        <label class="label-name" for="brand">브랜드</label>
+                        <input class="input-box" type="text" id="brand" name="brand" required>
+                    </div>
+                    <div class="input-group">
+                        <label class="label-name" for="category">카테고리</label>
+                        <input class="input-box" type="text" id="category" name="category" required>
+                    </div>
+                    <div class="input-group">
+                        <label class="label-name" for="image">이미지</label>
+                        <input class="input-box" type="file" id="image" name="image" required>
+                    </div>
+                    <div class="input-group">
+                        <label class="label-name" for="weight">중량</label>
+                        <input class="input-box" type="text" id="weight" name="weight">
+                    </div>
+                    <div class="input-group">
+                        <label class="label-name" for="calories">칼로리</label>
+                        <input class="input-box" type="text" id="calories" name="calories">
+                    </div>
+                    <div class="input-group">
+                        <label class="label-name" for="protein">단백질</label>
+                        <input class="input-box" type="text" id="protein" name="protein">
+                    </div>
+                    <div class="input-group">
+                        <label class="label-name" for="sodium">나트륨</label>
+                        <input class="input-box" type="text" id="sodium" name="sodium">
+                    </div>
+                    <div class="input-group">
+                        <label class="label-name" for="sugar">당류</label>
+                        <input class="input-box" type="text" id="sugar" name="sugar">
+                    </div>
+                    <div class="input-group">
+                        <label class="label-name" for="saturatedFat">포화지방</label>
+                        <input class="input-box" type="text" id="saturatedFat" name="saturatedFat">
+                    </div>
+                    <div class="input-group">
+                        <label class="label-name" for="allergy">알레르기 정보</label>
+                        <input class="input-box" type="text" id="allergy" name="allergy">
+                    </div>
+                    <div class="input-group">
+                        <label class="label-name" for="origin">원산지</label>
+                        <input class="input-box" type="text" id="origin" name="origin">
+                    </div>
+                    <button type="submit" class="submit-btn">등록하기</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
 </body>
+
 </html>

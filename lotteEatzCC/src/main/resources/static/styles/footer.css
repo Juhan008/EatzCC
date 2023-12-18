@@ -218,14 +218,13 @@ a.btn-md, button.btn-md {
     background: url(/images/webdevelop/comm_ico_sns_twitter.svg) 0 0 no-repeat;
     background-size: cover;
 }
-a.btn-sm, button.btn-sm {
-    height: 32px;
+a.btn-sm-ft, button.btn-sm {
     padding: 5px 13px;
     border-radius: 7px;
     background-color: #fff;
     border: 1px solid #D6DCE1;
 }
-a.btn-sm .text, button.btn-sm .text {
+a.btn-sm-ft .text, button.btn-sm .text {
     font-weight: 600;
     font-size: 13px;
     line-height: 18px;
@@ -234,12 +233,6 @@ a.btn-sm .text, button.btn-sm .text {
 }
 .footer-wrapper .footer-inner .sns-link-list {
     margin-left: 20px;
-}
-a.btn-sm, button.btn-sm {
-    height: 32px;
-    padding: 5px 13px;
-    background-color: #fff;
-    border: 1px solid #D6DCE1;
 }
 .footer-wrapper .footer-inner .btn-family {
     position: relative;

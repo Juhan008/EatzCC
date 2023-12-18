@@ -1,0 +1,64 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:insert="~{/admin/adminlnb :: adminlnbFragmentHead}"></head>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <link rel="stylesheet" href="/styles/menuInfo.css">
+</head>
+
+<body>
+    <div class="all-wrapper">
+        <div class="contents-wrapper">
+            <div th:insert="~{/admin/adminlnb :: adminlnbFragment}" class="lnb"></div>
+            <div class="contents">
+                <form action="/admin/editMenu" method="post">
+                    <input type="hidden" name="id" th:value="${menu.id}" />
+            
+                    <label for="menuName">메뉴 이름:</label>
+                    <input type="text" id="menuName" name="menuName" th:value="${menu.menuName}" />
+            
+                    <label for="brand">브랜드:</label>
+                    <input type="text" id="brand" name="brand" th:value="${menu.brand}" />
+            
+                    <label for="category">카테고리:</label>
+                    <input type="text" id="category" name="category" th:value="${menu.category}" />
+            
+                    <label for="image">이미지 URL:</label>
+                    <input type="text" id="image" name="image" th:value="${menu.image}" />
+            
+                    <label for="weight">중량:</label>
+                    <input type="text" id="weight" name="weight" th:value="${menu.weight}" />
+            
+                    <label for="calories">칼로리:</label>
+                    <input type="text" id="calories" name="calories" th:value="${menu.calories}" />
+            
+                    <label for="protein">단백질:</label>
+                    <input type="text" id="protein" name="protein" th:value="${menu.protein}" />
+            
+                    <label for="sodium">나트륨:</label>
+                    <input type="text" id="sodium" name="sodium" th:value="${menu.sodium}" />
+            
+                    <label for="sugar">당류:</label>
+                    <input type="text" id="sugar" name="sugar" th:value="${menu.sugar}" />
+            
+                    <label for="saturatedFat">포화지방:</label>
+                    <input type="text" id="saturatedFat" name="saturatedFat" th:value="${menu.saturatedFat}" />
+            
+                    <label for="allergy">알레르기 정보:</label>
+                    <input type="text" id="allergy" name="allergy" th:value="${menu.allergy}" />
+            
+                    <label for="origin">원산지:</label>
+                    <input type="text" id="origin" name="origin" th:value="${menu.origin}" />
+            
+                    <button type="submit">업데이트</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

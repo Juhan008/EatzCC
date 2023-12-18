@@ -3,23 +3,24 @@ package com.lotteeatzclone.java.user.service;
 import java.security.MessageDigest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.lotteeatzclone.java.user.dao.UserRepository;
+import com.lotteeatzclone.java.user.dao.UserDao;
 import com.lotteeatzclone.java.user.domain.User;
 
 @Service
 public class UserService {
   @Autowired
-  private UserRepository userRepository;
+  UserDao userDao;
 
   public void add(User user) {
-    user.setPassword(cryptoPassword(user.getPassword()));
-    userRepository.save(user);
+    user.setUserPassword(cryptoPassword(user.getUserPassword()));
+    userDao.add(user);
   }
 
-  public User login(String userId, String password) {
-    User tempUser = userRepository.findByUserId(userId);
+  public User login(User user) {
+    User tempUser = userDao.get(user.getUserId());
 
-    if (tempUser != null && tempUser.getPassword().equals(cryptoPassword(password))) {
+    if (tempUser != null
+        && tempUser.getUserPassword().equals(cryptoPassword(user.getUserPassword()))) {
       return tempUser;
     }
     return null;

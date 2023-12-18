@@ -36,3 +36,19 @@ body {
 .menu-item:hover, .menu-item.active {
     background-color: #f1c40f;
 }
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: inherit;
+}
+.contents-wrapper{
+    position: relative;
+    display: flex;
+    margin-left: 400px;
+    justify-content: flex-start;
+}
+.menu-item.active {
+    background-color:  #f1c40f;
+    color: #333;
+}

@@ -1,15 +1,25 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
 <head th:fragment="headerFragmentHead">
 	<link rel="stylesheet" href="/styles/header.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 	<div th:fragment="headerFragment" id="header">
 		<div class="header-wrapper">
 			<div class="header-top">
 				<ul class="user-menu">
 					<li class="user-item">
-						<a href="" class="user-menu-li">로그인/회원가입</a>
+						<a href="" class="user-menu-li">
+							<!-- 세션에 'userId'가 없으면 (로그인하지 않은 상태) 로그인 버튼 표시 -->
+							<a th:if="${session.userId == null}" href="/login">로그인</a>
+						
+							<!-- 세션에 'userId'가 있으면 (로그인한 상태) 로그아웃 버튼 표시 -->
+							<form th:if="${session.userId != null}" action="/logout" method="post">
+								<button type="submit">로그아웃</button>
+							</form>
+						</a>
 					</li>
 					<li class="user-item">
 						<a href="" class="user-menu-li">주문/예약 내역</a>
@@ -97,46 +107,22 @@
 				<ul class="util-menu">
 					<li class="util-item">
 						<a href="" class="btn-header-cart">
-							
-							<span class="count" style="display: none;">5</span>
+							<i class="ico-header-cart"><span class="offscreen">장바구니</span></i>
 						</a>
 					</li>
 					<li class="util-item">
-						<a href=""
-							class="btn-header-mypage"></a>
+						<a href="" class="btn-header-mypage"><i class="ico-header-cart"><span
+									class="offscreen">장바구니</span></i></a>
 					</li>
 				</ul>
-				<button type="button" class="order-btn"></button>
+				<button type="button" class="btn-header-order"></button>
 			</div>
 			<div class="sub-gnb-layer">
-				<div class="swiper-container-wrap swiper-common-banner">
-					<div class="swiper-container">
-						<ul class="swiper-wrapper">
-						</ul>
-						<div class="swiper-pagination"></div>
-					</div>
-					<div class="swiper-control-wrap">
-						<button type="button" class="swiper-button-prev"></button>
-						<button type="button" class="swiper-button-next"></button>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
-	<script>
-		document.addEventListener('DOMContentLoaded', function() {
-		  var buttons = document.querySelectorAll('.header-deq2-btn');
-		  var headerWrapper = document.querySelector('.header-wrapper');
-		  buttons.forEach(function(button) {
-			button.addEventListener('mouseenter', function() {
-			  headerWrapper.classList.add('show-sub-gnb');
-			});
-			button.addEventListener('mouseleave', function() {
-			  headerWrapper.classList.remove('show-sub-gnb');
-			});
-		  });
-		});
-	  </script>
+	<script src="/scripts/header.js"></script>
+
 </body>
 
 </html>

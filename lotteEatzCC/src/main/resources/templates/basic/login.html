@@ -1,10 +1,108 @@
-<!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:insert="~{/basic/header :: headerFragmentHead}"></head>
+
+<head th:insert="~{/basic/footer :: footerFragmentHead}"></head>
+
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <link rel="stylesheet" href="/styles/index.css" />
 </head>
+
+<head>
+    <link rel="stylesheet" href="/styles/login.css" />
+
+    <meta charset="UTF-8">
+    <title>LOTTE EATZ</title>
+</head>
+
 <body>
+    <div class="all-wrapper">
+        <div th:insert="~{/basic/header :: headerFragment}"></div>
+        <div class="container-wrapper">
+            <div class="cont-box">
+                <div class="cont-inner">
+                    <div class="cont-inner">
+                        <div class="page-tit-wrap">
+
+                            <div class="breadcrumb">
+                                <ol class="breadcrumb-list">
+                                    <li class="crumb"><a href="/eatzMain" class="link-home"><span
+                                                class="offscreen">홈</span></a>
+                                    </li>
+                                    <li class="crumb"><span class="menu">로그인</span></li>
+                                </ol>
+                            </div>
+
+                        </div>
+
+
+                        <div class="member-login-wrap">
+                            <div class="member-login-tit">
+                                지금 로그인하고<br><span class="member-login">LOTTE EATZ</span>
+                                혜택받으세요!
+                            </div>
+                            <form action="/login" method="post">
+                                <div class="form-login-wrap">
+
+                                    <input type="text" class="ui-input" name="userId" required id="onlId"
+                                        title="아이디 입력" maxlength="50" placeholder="L.POINT 아이디 입력">
+                                    <button type="button" class="btn-input-del"><span
+                                            class="offscreen">텍스트삭제</span></button>
+                                    <div class="valid-desc"></div>
+                                </div>
+
+                                <div class="input-box form-ip-pw valid-check" id="loginpw">
+                                    <input type="password" class="ui-input" name="userPassword" required id="password"
+                                        title="비밀번호 입력" placeholder="비밀번호 입력">
+                                    <div class="valid-desc"></div>
+                                </div>
+                                <div class="btn-wrap full">
+                                    <button type="submit" class="btn-md btn-primary">
+                                        <span class="text">로그인</span>
+                                    </button>
+                            </form>
+                        </div>
+                        <div class="member-link-wrap">
+                            <span class="ui-chk">
+                                <input id="chkAutoLogin" name="chkAutoLogin" type="checkbox">
+                                <label for="chkAutoLogin">자동 로그인</label>
+                            </span>
+                            <div class="right-link">
+                                <a href="#" class="btn-text-link"><span class="text">아이디 찾기</span></a>
+                                <a href="#" class="btn-text-link"><span class="text">비밀번호
+                                        찾기</span></a>
+                            </div>
+                        </div>
+                        <div class="member-login-sns btn-wrap full">
+
+
+                            <a href="javascript:void(0);" onclick="loginWithKakao()"
+                                class="btn-md btn-line-light-gray"><i class="ico-sns-kakao"></i><span class="text">카카오로
+                                    로그인</span></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cont-box no-line">
+                <div class="cont-inner">
+                    <div class="member-login-notice">
+                        <p class="bottom-text">아직 <span class="fc-spot">EATZ</span> 회원이 아니신가요?</p>
+                        <div class="btn-wrap full"><a href="/regist" class="btn-md btn-line-primary"><span
+                                    class="text">회원가입</span></a>
+                        </div>
+                        <button type="button" class="btn-more-view"><span class="text">비회원 주문/조회</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <div th:insert="~{/basic/footer :: footerFragment}"></div>
+    <script src="/scripts/header.js"></script>
 
 </body>
+
 </html>

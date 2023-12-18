@@ -1,25 +1,10 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOTTE Eatz 관리자 페이지</title>
-    <link rel="stylesheet" href="/static/styles/admin.css">
-</head>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:insert="~{/admin/adminlnb :: adminlnbFragmentHead}"></head>
+
 <body>
-    <div class="sidebar">
-        <div class="logo">LOTTE Eatz</div>
-        <ul class="menu">
-            <li class="menu-item" onclick="changeActiveMenu(this)">회원 목록</li>
-            <li class="menu-item" onclick="changeActiveMenu(this)">메뉴 등록</li>
-            <li class="menu-item" onclick="changeActiveMenu(this)">메뉴정보 관리</li>
-            <li class="menu-item" onclick="changeActiveMenu(this)">상품 등록</li>
-            <li class="menu-item" onclick="changeActiveMenu(this)">상품정보 관리</li>
-            <li class="menu-item" onclick="changeActiveMenu(this)">매장 등록</li>
-            <li class="menu-item" onclick="changeActiveMenu(this)">매장정보 관리</li>
-            <li class="menu-item" onclick="changeActiveMenu(this)">상담 관리</li>
-        </ul>
+    <div class="all-wrapper">
+        <div th:insert="~{/admin/adminlnb :: adminlnbFragment}"></div>
     </div>
-    <script src="/static/scripts/admin.js"></script>
 </body>
 </html>

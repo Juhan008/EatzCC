@@ -1,0 +1,48 @@
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="brandHotMenuFragmentHead">
+    <link rel="stylesheet" href="/styles/brandHotMenu.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div th:fragment="brandHotMenuFragment" class="brandHotMenu-wrapper">
+        <div class="brandHotMenu-cont">
+            <div class="brandHotMenu-top">
+                <div class="brandHotMenu-title">
+                    <div class="brandHotMenu-title-front"></div>
+                    <div class="brandHotMenu-title-back"></div>
+                </div>
+                <div class="brandHotMenu-order">
+                    <button class="brandHotMenu-order-btn">
+                        <div class="more-text">매장주문</div>
+                        <div class="more-ico"></div>
+                    </button>
+                </div>
+            </div>
+            <div class="brandHotMenu-brand-btn-row">
+                <button>플레:이팅</button>
+                <button>롯데리아</button>
+                <button>엔제리너스</button>
+                <button>크리스피크림 도넛</button>
+            </div>
+            <div class="brandHotMenu-menu-frame">
+                <div class="brandHotMenu-menu-img"></div>
+                <div class="brandHotMenu-menu-frame-title"></div>
+                <div class="brandHotMenu-menu-price"><span class="brandHotMenu-menu-unit">원</span></div>
+            </div>
+            <div class="brandHotMenu-bottum">
+                <div class="brandHotMenu-bottum-line"></div>
+                <div class="brandHotMenu-bottum-link">
+                    <button>
+                        <div class="more-text-brand"></div>
+                        <div class="more-text">메뉴 보러가기</div>
+                        <div class="more-ico"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

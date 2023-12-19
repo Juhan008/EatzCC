@@ -1,0 +1,43 @@
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="mainTopEventFragmentHead">
+	<link rel="stylesheet" href="/styles/mainTopEvent.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<div th:fragment="mainTopEventFragment" class="mainTopEvent-wrapper">
+    <div class="mainTopEvent-cont slider">
+        <div class="slide mainTopEvent-img1"></div>
+        <div class="slide mainTopEvent-img2"></div>
+        <div class="slide mainTopEvent-img3"></div>
+        <div class="slide mainTopEvent-img4"></div>
+        <div class="slide mainTopEvent-img5"></div>
+        <div class="slide mainTopEvent-img6"></div>
+        <div class="slide mainTopEvent-img7"></div>
+        <div class="slide mainTopEvent-img8"></div>
+        <div class="slide mainTopEvent-img9"></div>
+        <div class="slide mainTopEvent-img10"></div>
+    </div>
+
+    <script>
+        let slideIndex = 0; // 현재 슬라이드 인덱스
+        
+        function showSlides() {
+          const slides = document.querySelectorAll('.slide');
+          for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {
+            slideIndex = 1;
+          }
+          slides[slideIndex - 1].style.display = 'block'; 
+          setTimeout(showSlides, 3000); 
+        }
+        
+        showSlides();
+        </script>
+</div>
+</body>
+</html>

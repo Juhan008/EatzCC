@@ -1,0 +1,132 @@
+.mainTopEvent-wrapper{
+    position: relative;
+    height: 320px;
+    min-width: 490px;
+}
+.mainTopEvent-cont {
+    overflow: hidden;
+  }
+  
+  .slider {
+    display: flex; 
+    animation: slide 30s infinite;
+  }
+  
+  .slide {
+    flex: 1;
+  }
+  
+  @keyframes slide {
+    0%, 100% {
+      transform: translateX(0); /* 초기 위치 */
+    }
+    10% {
+      transform: translateX(-10%); /* 이미지를 왼쪽으로 이동 */
+    }
+    20% {
+      transform: translateX(-20%); /* 이미지를 왼쪽으로 이동 */
+    }
+    30% {
+      transform: translateX(-30%); /* 이미지를 왼쪽으로 이동 */
+    }
+    40% {
+      transform: translateX(-40%); /* 이미지를 왼쪽으로 이동 */
+    }
+    50% {
+      transform: translateX(-50%); /* 이미지를 왼쪽으로 이동 */
+    }
+    60% {
+      transform: translateX(-60%); /* 이미지를 왼쪽으로 이동 */
+    }
+    70% {
+      transform: translateX(-70%); /* 이미지를 왼쪽으로 이동 */
+    }
+    80% {
+      transform: translateX(-80%); /* 이미지를 왼쪽으로 이동 */
+    }
+    90% {
+      transform: translateX(-90%); /* 이미지를 왼쪽으로 이동 */
+    }
+  }
+  
+  
+.mainTopEvent-img1{
+    background-image: url(/images/webdevelop/maintope1.jpeg);
+    background-size: cover;
+    position: relative;
+    height: 320px;
+    min-width: 490px;
+    max-width: 760px;
+}
+.mainTopEvent-img2{
+    background-image: url(/images/webdevelop/maintope2.jpeg);
+    background-size: cover;
+    position: relative;
+    height: 320px;
+    min-width: 490px;
+    max-width: 760px;
+}
+.mainTopEvent-img3{
+    background-image: url(/images/webdevelop/maintope3.jpeg);
+    background-size: cover;
+    position: relative;
+    height: 320px;
+    min-width: 490px;
+    max-width: 760px;
+}
+.mainTopEvent-img4{
+    background-image: url(/images/webdevelop/maintope4.jpeg);
+    background-size: cover;
+    position: relative;
+    height: 320px;
+    min-width: 490px;
+    max-width: 760px;
+}
+.mainTopEvent-img5{
+    background-image: url(/images/webdevelop/maintope5.jpeg);
+    background-size: cover;
+    position: relative;
+    height: 320px;
+    min-width: 490px;
+    max-width: 760px;
+}
+.mainTopEvent-img6{
+    background-image: url(/images/webdevelop/maintope6.jpeg);
+    background-size: cover;
+    position: relative;
+    height: 320px;
+    min-width: 490px;
+    max-width: 760px;
+}
+.mainTopEvent-img7{
+    background-image: url(/images/webdevelop/maintope7.jpeg);
+    background-size: cover;
+    position: relative;
+    height: 320px;
+    min-width: 490px;
+    max-width: 760px;
+}
+.mainTopEvent-img8{
+    background-image: url(/images/webdevelop/maintope8.jpeg);
+    background-size: cover;
+    position: relative;
+    height: 320px;
+    min-width: 490px;
+    max-width: 760px;
+}
+.mainTopEvent-img9{
+    background-image: url(/images/webdevelop/maintope9.jpeg);
+    background-size: cover;
+    position: relative;
+    height: 320px;
+    min-width: 490px;
+    max-width: 760px;
+}
+.mainTopEvent-img10{
+    background-image: url(/images/webdevelop/maintope10.jpeg);
+    background-size: cover;
+    position: relative;
+    height: 320px;
+    min-width: 490px;
+    max-width: 760px;
+}

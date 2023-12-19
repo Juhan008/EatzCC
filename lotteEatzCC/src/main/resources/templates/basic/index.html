@@ -1,8 +1,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head th:insert="~{/basic/header :: headerFragmentHead}"></head>
+<head th:insert="~{/mainPage/mainTopEvent :: mainTopEventFragmentHead}"></head>
 <head th:insert="~{/basic/footer :: footerFragmentHead}"></head>
-  <head><link rel="stylesheet" href="/styles/index.css" />
+
+<head>
+  <link rel="stylesheet" href="/styles/index.css" />
   <meta charset="UTF-8">
   <title>LOTTE EATZ</title>
 </head>
@@ -10,7 +13,12 @@
 <body>
   <div class="all-wrapper">
     <div th:insert="~{/basic/header :: headerFragment}"></div>
-  <div th:insert="~{/basic/footer :: footerFragment}"></div>
+    <div class="maincont-wrapper">
+      <div class="leftcont-wrapper">
+        <div th:insert="~{/mainPage/mainTopEvent :: mainTopEventFragment}"></div>
+      </div>
+    </div>
+    <div th:insert="~{/basic/footer :: footerFragment}"></div>
   </div>
   <script src="/scripts/header.js"></script>
 </body>

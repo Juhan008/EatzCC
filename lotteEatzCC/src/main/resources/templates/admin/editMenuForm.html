@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Insert title here</title>
-    <link rel="stylesheet" href="/styles/menuInfo.css">
+    <link rel="stylesheet" href="/styles/editmenu.css">
 </head>
 
 <body>
@@ -52,6 +52,12 @@
                     <label for="origin">원산지:</label>
                     <input type="text" id="origin" name="origin" th:value="${menu.origin}" />
             
+                    <label for="price">가격:</label>
+                    <input type="text" id="price" name="price" th:value="${menu.price}" />
+                    <label for="mainMenu">메인메뉴:</label>
+                    <input type="text" id="mainMenu" name="mainMenu" th:value="${menu.mainMenu}" />
+                    <label for="hotMenu">추천메뉴:</label>
+                    <input type="text" id="hotMenu" name="hotMenu" th:value="${menu.hotMenu}" />
                     <button type="submit">업데이트</button>
                 </form>
                 </div>

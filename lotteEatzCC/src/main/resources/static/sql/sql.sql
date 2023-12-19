@@ -59,10 +59,10 @@ create table store_Table (
 );
 create table menu_table (
     "id" number generated as identity primary key,
-   	"menu_name" VARCHAR2(200) NOT NULL,
+   	"menuName" VARCHAR2(200) NOT NULL,
    	"brand" VARCHAR2(20) NOT NULL,
    	"category" VARCHAR2(20) NOT NULL,
-   	"image" VARCHAR2(200) NOT NULL,
+   	"image" VARCHAR2(1000) NOT NULL,
    	"weight" VARCHAR2(200),
    	"calories" VARCHAR2(200),
    	"protein" VARCHAR2(200),
@@ -70,7 +70,10 @@ create table menu_table (
    	"sugar" VARCHAR2(200),
    	"saturatedFat" VARCHAR2(200),
    	"allergy" VARCHAR2(200),
-   	"origin" VARCHAR2(200)
+   	"origin" VARCHAR2(200),
+    "price" VARCHAR2(255),
+    "mainMenu" VARCHAR2(30),
+    "hotMenu" VARCHAR2(30)
 );
 create table productsCategory_Table (
     "id" number generated as identity primary key,

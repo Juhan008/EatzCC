@@ -16,14 +16,15 @@ public class DiningMenuDao {
 
   public void add(DiningMenu diningMenu) {
     String sql =
-        "INSERT INTO menu_table (\"menuName\", \"brand\", \"category\", \"image\", \"weight\", \"calories\", \"protein\", \"sodium\", \"sugar\", \"saturatedFat\", \"allergy\", \"origin\") "
-            + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        "INSERT INTO menu_table (\"menuName\", \"brand\", \"category\", \"image\", \"weight\", \"calories\", \"protein\", \"sodium\", \"sugar\", \"saturatedFat\", \"allergy\", \"origin\", \"price\", \"mainMenu\", \"hotMenu\") "
+            + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,?)";
 
     jdbcTemplate.update(sql, diningMenu.getMenuName(), diningMenu.getBrand(),
         diningMenu.getCategory(), diningMenu.getImage(), diningMenu.getWeight(),
         diningMenu.getCalories(), diningMenu.getProtein(), diningMenu.getSodium(),
         diningMenu.getSugar(), diningMenu.getSaturatedFat(), diningMenu.getAllergy(),
-        diningMenu.getOrigin());
+        diningMenu.getOrigin(), diningMenu.getPrice(), diningMenu.getMainMenu(),
+        diningMenu.getHotMenu());
   }
 }
 

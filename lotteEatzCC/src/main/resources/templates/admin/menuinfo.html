@@ -38,7 +38,8 @@
                                 <td th:text="${menu.brand}"></td>
                                 <td th:text="${menu.category}"></td>
                                 <td>
-                                    <img class="img-view" th:src="@{${menu.image}}" alt="Menu Image" />
+                                    <img class="img-view" th:src="${menu.image}" alt="Menu Image" width="150px" height="150px" />
+
                                 </td>
                                 <td th:text="${menu.weight}"></td>
                                 <td th:text="${menu.calories}"></td>
@@ -48,12 +49,16 @@
                                 <td th:text="${menu.saturatedFat}"></td>
                                 <td th:text="${menu.allergy}"></td>
                                 <td th:text="${menu.origin}"></td>
+                                <td th:text="${menu.price}"></td>
+                                <td th:text="${menu.mainMenu}"></td>
+                                <td th:text="${menu.hotMenu}"></td>
                                 <td>
-                                    <a href="/admin/editMenuForm?menuId=${menu.id}">수정</a>
+                                    <a th:href="@{/admin/editMenuForm(id=${menu.id})}">수정</a>
                                     <form method="post" action="/admin/deleteMenu" style="display:inline;">
                                         <input type="hidden" name="menuId" th:value="${menu.id}" />
                                         <button type="submit">삭제</button>
                                     </form>
+                                    
                                 </td>
                             </tr>
                         </tbody>

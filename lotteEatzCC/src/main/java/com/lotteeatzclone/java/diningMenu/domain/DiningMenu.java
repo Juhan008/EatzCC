@@ -31,4 +31,7 @@ public class DiningMenu {
   private String saturatedFat;
   private String allergy;
   private String origin;
+  private String price;
+  private String mainMenu;
+  private String hotMenu;
 }

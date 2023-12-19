@@ -1,0 +1,126 @@
+.wrapper .cont-box,
+.ui-dialog .cont-box {
+    padding-top: 0;
+}
+
+
+body {
+    display: block;
+    min-width: 891px;
+}
+
+.cont-box {
+    position: relative;
+    max-width: 1150px;
+    padding: 0 20px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.container-wrapper {
+    background: #fff;
+    padding-top: 30px;
+    padding-bottom: 100px;
+}
+
+.cont-box .cont-inner {
+    position: relative;
+    padding: 30px 0;
+}
+
+.breadcrumb .breadcrumb-list .crumb {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.page-tit-wrap {
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.breadcrumb .breadcrumb-list .crumb~.crumb {
+    padding-left: 24px;
+    margin-left: 8px;
+}
+
+.breadcrumb .breadcrumb-list .crumb .link-home {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-top: -1px;
+    background: url(/images/webdevelop/comm_ico_breadcrumb_home.svg) 0 0 no-repeat;
+    background-size: cover;
+}
+
+.breadcrumb .breadcrumb-list .crumb~.crumb:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    vertical-align: top;
+    width: 16px;
+    height: 16px;
+    background: url(/images/webdevelop/comm_ico_breadcrumb_divide.svg) 0 0 no-repeat;
+    background-size: cover;
+}
+
+.breadcrumb .breadcrumb-list .crumb .menu {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.025em;
+    line-height: 16px;
+    color: #666;
+}
+
+.page-tit-wrap .breadcrumb {
+    margin-left: auto;
+}
+.aside-content-wrap .aside-content-inner {
+    max-width: 1150px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-direction: row;
+}
+.aside-content-wrap.cont-prod-wrap .aside-wrap {
+    position: relative;
+    width: 382px;
+}
+.aside-content-wrap.cont-prod-wrap:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 1px;
+    background: #DDE0E3;
+}
+.wrapper .cont-prod-wrap.aside-content-wrap:not(.cont-prod-detail) .aside-wrap .aside-store-wrap {
+    width: 382px;
+    padding-right: 40px;
+}
+
+.aside-content-wrap .aside-wrap:first-child:before {
+    left: auto;
+    right: 0;
+}
+
+.aside-content-wrap .aside-wrap:before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    bottom: -100px;
+    width: 1px;
+    left: 0;
+    background: #DDE0E3;
+}

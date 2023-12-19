@@ -37,24 +37,27 @@ public class DiningMenuController {
       @RequestParam("calories") String calories, @RequestParam("protein") String protein,
       @RequestParam("sodium") String sodium, @RequestParam("sugar") String sugar,
       @RequestParam("saturatedFat") String saturatedFat, @RequestParam("allergy") String allergy,
-      @RequestParam("origin") String origin) {
+      @RequestParam("origin") String origin, @RequestParam("price") String price,
+      @RequestParam("mainMenu") String mainMenu, @RequestParam("hotMenu") String hotMenu) {
     try {
       // 이미지 파일 처리
-      String filename =
-          UUID.randomUUID().toString().substring(0, 8) + "_" + file.getOriginalFilename();
-      Path path = Paths.get(
+      String originName = file.getOriginalFilename();
+      String ext = originName.substring(originName.lastIndexOf("."));
+      String randomName = UUID.randomUUID().toString() + ext;
+      String savePath =
           "/Users/limjuhan/eclipse-workspace/lotteEatzCC/src/main/resources/static/images/menu/"
-              + filename);
+              + randomName;
+      Path path = Paths.get(savePath);
       Files.copy(file.getInputStream(), path);
 
-      String imagePath = path.toString();
+      String webImagePath = "/images/menu/" + randomName; // 웹 URL 경로
 
       // 메뉴 객체 생성 및 설정
       DiningMenu diningMenu = new DiningMenu();
       diningMenu.setMenuName(menuName);
       diningMenu.setBrand(brand);
       diningMenu.setCategory(category);
-      diningMenu.setImage(imagePath);
+      diningMenu.setImage(webImagePath);
       diningMenu.setWeight(weight);
       diningMenu.setCalories(calories);
       diningMenu.setProtein(protein);
@@ -63,6 +66,9 @@ public class DiningMenuController {
       diningMenu.setSaturatedFat(saturatedFat);
       diningMenu.setAllergy(allergy);
       diningMenu.setOrigin(origin);
+      diningMenu.setPrice(price);
+      diningMenu.setMainMenu(mainMenu);
+      diningMenu.setHotMenu(hotMenu);
 
       // 메뉴 정보 데이터베이스에 저장
       diningMenuService.addMenu(diningMenu);
@@ -82,6 +88,20 @@ public class DiningMenuController {
     return "/admin/menuinfo";
   }
 
+  @GetMapping("/admin/editMenuForm")
+  public String editMenuForm(@RequestParam("id") Long id, Model model) {
+    Optional<DiningMenu> diningMenuOpt = diningMenuService.getMenuById(id);
+    if (diningMenuOpt.isPresent()) {
+      model.addAttribute("menu", diningMenuOpt.get());
+      return "admin/editMenuForm";
+    } else {
+      // 에러 처리 또는 다른 페이지로 리디렉션
+      return "redirect:/errorPage";
+    }
+  }
+
+
+
   @PostMapping("/admin/editMenu")
   public String editMenu(@RequestParam("id") Long id, @RequestParam("menuName") String menuName,
       @RequestParam("brand") String brand, @RequestParam("category") String category,
@@ -89,24 +109,19 @@ public class DiningMenuController {
       @RequestParam("calories") String calories, @RequestParam("protein") String protein,
       @RequestParam("sodium") String sodium, @RequestParam("sugar") String sugar,
       @RequestParam("saturatedFat") String saturatedFat, @RequestParam("allergy") String allergy,
-      @RequestParam("origin") String origin) {
+      @RequestParam("origin") String origin, @RequestParam("price") String price,
+      @RequestParam("mainMenu") String mainMenu, @RequestParam("hotMenu") String hotMenu) {
     DiningMenu diningMenu = new DiningMenu(id, menuName, brand, category, image, weight, calories,
-        protein, sodium, sugar, saturatedFat, allergy, origin);
+        protein, sodium, sugar, saturatedFat, allergy, origin, price, mainMenu, hotMenu);
     diningMenuService.editMenu(diningMenu);
-    return "/admin/menuinfo";
+    return "redirect:/admin/menuinfo";
   }
 
-  @GetMapping("/admin/editMenuForm")
-  public String editMenuForm(@RequestParam("menuId") Long menuId, Model model) {
-    Optional<DiningMenu> diningMenu = diningMenuService.getMenuById(menuId);
-    model.addAttribute("diningMenu", diningMenu);
-    return "editMenuForm";
-  }
 
 
   @PostMapping("/admin/deleteMenu")
-  public String deleteMenu(@RequestParam("menuId") Long menuId) {
-    diningMenuService.deleteMenu(menuId);
+  public String deleteMenu(@RequestParam("menuId") Long id) {
+    diningMenuService.deleteMenu(id);
     return "redirect:/admin/menuinfo";
   }
 }

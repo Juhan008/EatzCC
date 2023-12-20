@@ -4,8 +4,50 @@
     align-items: stretch;
     flex-direction: column;
 }
-ol, ul, nav {
+
+ol,
+ul,
+nav {
     list-style: none;
 }
-html, body {
-    font-family: "Pretendard", "SF Pro Display", AppleSDGothicNeo-Light, Helvetica, "Malgun Gothic", "MalgunGothic", "맑은고딕", sans-serif !important;}
+
+html,
+body {
+    font-family: "Pretendard", "SF Pro Display", AppleSDGothicNeo-Light, Helvetica, "Malgun Gothic", "MalgunGothic", "맑은고딕", sans-serif !important;
+}
+
+.maincont-wrapper {
+    max-width: 1150px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-direction: row;
+    padding-bottom: 100px;
+}
+.th-mainTopEvent{
+}
+.business-cont-wrapper{
+    margin-left: -20px;
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 30px;
+}
+.aside-cont-wrapper::before{
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    bottom: -100px;
+    width: 1px;
+    left: 0;
+    background: #DDE0E3;
+}
+.aside-cont-wrapper{
+    width: 310px;
+    position: relative;
+    min-height: 100%;
+    flex: 0 0 310px;
+}

@@ -1,7 +1,19 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head th:insert="~{/basic/header :: headerFragmentHead}"></head>
+
 <head th:insert="~{/mainPage/mainTopEvent :: mainTopEventFragmentHead}"></head>
+<head th:insert="~{/mainPage/storeInfo :: storeInfoFragmentHead}"></head>
+<head th:insert="~{/mainPage/quickButton :: quickButtonFragmentHead}"></head>
+<head th:insert="~{/mainPage/mainCoupon :: mainCouponFragmentHead}"></head>
+<head th:insert="~{/mainPage/weatherPick :: weatherPickFragmentHead}"></head>
+<head th:insert="~{/mainPage/brandHotMenu :: brandHotMenuFragmentHead}"></head>
+<head th:insert="~{/mainPage/mainBottomEvent :: mainBottomEventFragmentHead}"></head>
+<head th:insert="~{/mainPage/mainMedia :: mainMediaFragmentHead}"></head>
+
+
+<head th:insert="~{/mainPage/mainAside :: mainAsideFragmentHead}"></head>
+
 <head th:insert="~{/basic/footer :: footerFragmentHead}"></head>
 
 <head>
@@ -14,8 +26,18 @@
   <div class="all-wrapper">
     <div th:insert="~{/basic/header :: headerFragment}"></div>
     <div class="maincont-wrapper">
-      <div class="leftcont-wrapper">
-        <div th:insert="~{/mainPage/mainTopEvent :: mainTopEventFragment}"></div>
+      <div class="business-cont-wrapper">
+        <div th:insert="~{/mainPage/mainTopEvent :: mainTopEventFragment}" class="th-mainTopEvent"></div>
+        <div th:insert="~{/mainPage/storeInfo :: storeInfoFragment}" class=""></div>
+        <div th:insert="~{/mainPage/quickButton :: quickButtonFragment}" class=""></div>
+        <div th:insert="~{/mainPage/mainCoupon :: mainCouponFragment}" class=""></div>
+        <div th:insert="~{/mainPage/weatherPick :: weatherPickFragment}" class=""></div>
+        <div th:insert="~{/mainPage/brandHotMenu :: brandHotMenuFragment}" class=""></div>
+        <div th:insert="~{/mainPage/mainBottomEvent :: mainBottomEventFragment}" class=""></div>
+        <div th:insert="~{/mainPage/mainMedia :: mainMediaFragment}" class=""></div>
+      </div>
+      <div class="aside-cont-wrapper">
+        <div th:insert="~{/mainPage/mainAside :: mainAsideFragment}"></div>
       </div>
     </div>
     <div th:insert="~{/basic/footer :: footerFragment}"></div>

@@ -1,43 +1,75 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 
 <head th:fragment="mainTopEventFragmentHead">
-	<link rel="stylesheet" href="/styles/mainTopEvent.css" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/mainTopEvent.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-<div th:fragment="mainTopEventFragment" class="mainTopEvent-wrapper">
+  <div th:fragment="mainTopEventFragment" class="mainTopEvent-wrapper">
     <div class="mainTopEvent-cont slider">
-        <div class="slide mainTopEvent-img1"></div>
-        <div class="slide mainTopEvent-img2"></div>
-        <div class="slide mainTopEvent-img3"></div>
-        <div class="slide mainTopEvent-img4"></div>
-        <div class="slide mainTopEvent-img5"></div>
-        <div class="slide mainTopEvent-img6"></div>
-        <div class="slide mainTopEvent-img7"></div>
-        <div class="slide mainTopEvent-img8"></div>
-        <div class="slide mainTopEvent-img9"></div>
-        <div class="slide mainTopEvent-img10"></div>
+      <div class="slide mainTopEvent-img1"></div>
+      <div class="slide mainTopEvent-img2"></div>
+      <div class="slide mainTopEvent-img3"></div>
+      <div class="slide mainTopEvent-img4"></div>
+      <div class="slide mainTopEvent-img5"></div>
+      <div class="slide mainTopEvent-img6"></div>
+      <div class="slide mainTopEvent-img7"></div>
+      <div class="slide mainTopEvent-img8"></div>
+      <div class="slide mainTopEvent-img9"></div>
+      <div class="slide mainTopEvent-img10"></div>
     </div>
-
+    <div class="event-event-cont">
+      <div class="event-btn">
+        <button class="event-btn-img prevButton" id="prevButton"></button>
+        <button class="event-btn-img nextButton" id="nextButton"></button>
+      </div>
+      <div class="slide-counter-cont">
+        <div class="slide-counter-outline">
+          <div class="slide-counter-func">  </div><div class="slide-counter-func" id="slideCounter"></div><div class="slide-counter-func">/</div>
+          <div class="slide-counter-default"> 10</div> <div class="event-more"></div>
+        </div>
+      </div>
+    </div>
     <script>
-        let slideIndex = 0; // 현재 슬라이드 인덱스
-        
-        function showSlides() {
-          const slides = document.querySelectorAll('.slide');
-          for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = 'none';
-          }
-          slideIndex++;
-          if (slideIndex > slides.length) {
-            slideIndex = 1;
-          }
-          slides[slideIndex - 1].style.display = 'block'; 
-          setTimeout(showSlides, 3000); 
+      let currentIndex = 0;
+      const slides = document.querySelectorAll('.slide');
+      const totalSlides = slides.length;
+      const counterElement = document.getElementById('slideCounter');
+      const prevButton = document.getElementById('prevButton');
+      const nextButton = document.getElementById('nextButton');
+
+      updateCounter();
+
+      prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateSlidePosition();
+        updateCounter();
+      });
+
+      nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlidePosition();
+        updateCounter();
+      });
+
+      function updateSlidePosition() {
+        for (let i = 0; i < totalSlides; i++) {
+          slides[i].style.transform = `translateX(-${100 * currentIndex}%)`;
         }
-        
-        showSlides();
-        </script>
-</div>
+      }
+      function updateCounter() {
+        counterElement.textContent = `${currentIndex + 1} `;
+      }
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlidePosition();
+        updateCounter();
+      }, 3000);
+
+    </script>
+
+  </div>
 </body>
+
 </html>

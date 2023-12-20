@@ -1,132 +1,170 @@
-.mainTopEvent-wrapper{
-    position: relative;
-    height: 320px;
-    min-width: 490px;
+.mainTopEvent-wrapper {
+  height: 320px;
+  min-width: 490px;
+  max-width: 720px;
+  width: 100%;
 }
+
 .mainTopEvent-cont {
-    overflow: hidden;
-  }
-  
-  .slider {
-    display: flex; 
-    animation: slide 30s infinite;
-  }
-  
-  .slide {
-    flex: 1;
-  }
-  
-  @keyframes slide {
-    0%, 100% {
-      transform: translateX(0); /* 초기 위치 */
-    }
-    10% {
-      transform: translateX(-10%); /* 이미지를 왼쪽으로 이동 */
-    }
-    20% {
-      transform: translateX(-20%); /* 이미지를 왼쪽으로 이동 */
-    }
-    30% {
-      transform: translateX(-30%); /* 이미지를 왼쪽으로 이동 */
-    }
-    40% {
-      transform: translateX(-40%); /* 이미지를 왼쪽으로 이동 */
-    }
-    50% {
-      transform: translateX(-50%); /* 이미지를 왼쪽으로 이동 */
-    }
-    60% {
-      transform: translateX(-60%); /* 이미지를 왼쪽으로 이동 */
-    }
-    70% {
-      transform: translateX(-70%); /* 이미지를 왼쪽으로 이동 */
-    }
-    80% {
-      transform: translateX(-80%); /* 이미지를 왼쪽으로 이동 */
-    }
-    90% {
-      transform: translateX(-90%); /* 이미지를 왼쪽으로 이동 */
-    }
-  }
-  
-  
-.mainTopEvent-img1{
-    background-image: url(/images/webdevelop/maintope1.jpeg);
-    background-size: cover;
-    position: relative;
-    height: 320px;
-    min-width: 490px;
-    max-width: 760px;
+  height: 100%;
+  width: 100%;
 }
-.mainTopEvent-img2{
-    background-image: url(/images/webdevelop/maintope2.jpeg);
-    background-size: cover;
-    position: relative;
-    height: 320px;
-    min-width: 490px;
-    max-width: 760px;
+
+.mainTopEvent-cont {
+  overflow: hidden;
+  border-radius: 4px;
 }
-.mainTopEvent-img3{
-    background-image: url(/images/webdevelop/maintope3.jpeg);
-    background-size: cover;
-    position: relative;
-    height: 320px;
-    min-width: 490px;
-    max-width: 760px;
+
+.slider {
+  display: flex;
+  overflow: hidden;
 }
-.mainTopEvent-img4{
-    background-image: url(/images/webdevelop/maintope4.jpeg);
-    background-size: cover;
-    position: relative;
-    height: 320px;
-    min-width: 490px;
-    max-width: 760px;
+
+.slide {
+  min-width: 760px;
+  transition: transform 0.5s ease;
+  position: relative;
 }
-.mainTopEvent-img5{
-    background-image: url(/images/webdevelop/maintope5.jpeg);
-    background-size: cover;
-    position: relative;
-    height: 320px;
-    min-width: 490px;
-    max-width: 760px;
+
+
+.mainTopEvent-img1 {
+  background-image: url(/images/webdevelop/maintope1.jpeg);
+  background-size: cover;
 }
-.mainTopEvent-img6{
-    background-image: url(/images/webdevelop/maintope6.jpeg);
-    background-size: cover;
-    position: relative;
-    height: 320px;
-    min-width: 490px;
-    max-width: 760px;
+
+.mainTopEvent-img2 {
+  background-image: url(/images/webdevelop/maintope2.jpeg);
+  background-size: cover;
 }
-.mainTopEvent-img7{
-    background-image: url(/images/webdevelop/maintope7.jpeg);
-    background-size: cover;
-    position: relative;
-    height: 320px;
-    min-width: 490px;
-    max-width: 760px;
+
+.mainTopEvent-img3 {
+  background-image: url(/images/webdevelop/maintope3.jpeg);
+  background-size: cover;
 }
-.mainTopEvent-img8{
-    background-image: url(/images/webdevelop/maintope8.jpeg);
-    background-size: cover;
-    position: relative;
-    height: 320px;
-    min-width: 490px;
-    max-width: 760px;
+
+.mainTopEvent-img4 {
+  background-image: url(/images/webdevelop/maintope4.jpeg);
+  background-size: cover;
 }
-.mainTopEvent-img9{
-    background-image: url(/images/webdevelop/maintope9.jpeg);
-    background-size: cover;
-    position: relative;
-    height: 320px;
-    min-width: 490px;
-    max-width: 760px;
+
+.mainTopEvent-img5 {
+  background-image: url(/images/webdevelop/maintope5.jpeg);
+  background-size: cover;
+  position: relative;
 }
-.mainTopEvent-img10{
-    background-image: url(/images/webdevelop/maintope10.jpeg);
-    background-size: cover;
-    position: relative;
-    height: 320px;
-    min-width: 490px;
-    max-width: 760px;
+
+.mainTopEvent-img6 {
+  background-image: url(/images/webdevelop/maintope6.jpeg);
+  background-size: cover;
+}
+
+.mainTopEvent-img7 {
+  background-image: url(/images/webdevelop/maintope7.jpeg);
+  background-size: cover;
+}
+
+.mainTopEvent-img8 {
+  background-image: url(/images/webdevelop/maintope8.jpeg);
+  background-size: cover;
+  position: relative;
+
+}
+
+.mainTopEvent-img9 {
+  background-image: url(/images/webdevelop/maintope9.jpeg);
+  background-size: cover;
+}
+
+.mainTopEvent-img10 {
+  background-image: url(/images/webdevelop/maintope10.jpeg);
+  background-size: cover;
+}
+
+.event-event-cont {
+  margin-top: -170px;
+}
+
+.event-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.prevButton {
+  background-image: url(/images/webdevelop/ui_ico_swiper_arr_h40.svg);
+  background-size: cover;
+  margin: 0%;
+  transform: scaleX(-1);
+  transition: opacity 0.23s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.nextButton {
+  background-image: url(/images/webdevelop/ui_ico_swiper_arr_h40.svg);
+  background-size: cover;
+  margin: 0%;
+  transition: opacity 0.23s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.slide-counter-cont {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.slide-counter-outline {
+  height: 22px;
+  width: 66px;
+  display: inline-flex;
+  flex-direction: row;
+  vertical-align: top;
+  padding: 2px 5px;
+  border-radius: 26px;
+  backdrop-filter: blur(15px) brightness(80%);
+  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  margin: 59px 43px 0px 0px;
+}
+
+.slide-counter-func {
+  width: auto;
+  height: 22px;
+}
+
+.slide-counter-func {
+  color: #fff;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  letter-spacing: -0.025em;
+  line-height: 22px;
+}
+
+.slide-counter-default {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.025em;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.67);
+}
+
+.event-more {
+  background-image: url(/images/webdevelop/ico_event_more.svg);
+  background-size: 18px;
+  width: 19px;
+  height: 19px;
 }

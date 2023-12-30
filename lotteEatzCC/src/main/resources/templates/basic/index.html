@@ -3,12 +3,19 @@
 <head th:insert="~{/basic/header :: headerFragmentHead}"></head>
 
 <head th:insert="~{/mainPage/mainTopEvent :: mainTopEventFragmentHead}"></head>
+
 <head th:insert="~{/mainPage/storeInfo :: storeInfoFragmentHead}"></head>
+
 <head th:insert="~{/mainPage/quickButton :: quickButtonFragmentHead}"></head>
+
 <head th:insert="~{/mainPage/mainCoupon :: mainCouponFragmentHead}"></head>
+
 <head th:insert="~{/mainPage/weatherPick :: weatherPickFragmentHead}"></head>
+
 <head th:insert="~{/mainPage/brandHotMenu :: brandHotMenuFragmentHead}"></head>
+
 <head th:insert="~{/mainPage/mainBottomEvent :: mainBottomEventFragmentHead}"></head>
+
 <head th:insert="~{/mainPage/mainMedia :: mainMediaFragmentHead}"></head>
 
 
@@ -26,7 +33,7 @@
   <div class="all-wrapper">
     <div th:insert="~{/basic/header :: headerFragment}"></div>
     <div class="maincont-wrapper">
-      <div class="business-cont-wrapper">
+      <div id="businessWrapper" class="business-cont-wrapper">
         <div th:insert="~{/mainPage/mainTopEvent :: mainTopEventFragment}" class="th-mainTopEvent"></div>
         <div th:insert="~{/mainPage/storeInfo :: storeInfoFragment}" class=""></div>
         <div th:insert="~{/mainPage/quickButton :: quickButtonFragment}" class=""></div>
@@ -36,13 +43,33 @@
         <div th:insert="~{/mainPage/mainBottomEvent :: mainBottomEventFragment}" class=""></div>
         <div th:insert="~{/mainPage/mainMedia :: mainMediaFragment}" class=""></div>
       </div>
-      <div class="aside-cont-wrapper">
+      <div id="asideWrapper" class="aside-cont-wrapper">
         <div th:insert="~{/mainPage/mainAside :: mainAsideFragment}"></div>
       </div>
     </div>
     <div th:insert="~{/basic/footer :: footerFragment}"></div>
   </div>
   <script src="/scripts/header.js"></script>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+    // 모든 스크롤 컨테이너를 선택
+    const scrollContainers = document.querySelectorAll('.scroll-container');
+
+    scrollContainers.forEach(container => {
+        const scrollableContent = container.querySelector('.scrollable-content');
+        const leftBtn = container.querySelector('.scroll-btn.left');
+        const rightBtn = container.querySelector('.scroll-btn.right');
+
+        leftBtn.addEventListener('click', function() {
+            scrollableContent.scrollBy({ left: -100, behavior: 'smooth' });
+        });
+
+        rightBtn.addEventListener('click', function() {
+            scrollableContent.scrollBy({ left: 100, behavior: 'smooth' });
+        });
+    });
+});
+  </script>
 </body>
 
 </html>

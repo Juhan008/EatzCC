@@ -2,13 +2,14 @@ package com.lotteeatzclone.java.diningMenu.service;
 
 
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import org.hibernate.service.spi.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -40,36 +41,32 @@ public class DiningMenuService {
   }
 
   public void deleteMenu(Long id) {
-    // 먼저 메뉴 항목의 이미지 파일 경로를 조회
-    String imagePathQuery = "SELECT \"image\" FROM menu_table WHERE \"id\" = ?";
+    String imagePathQuery = "SELECT image FROM menu_table WHERE id = ?";
 
-    // RowMapper를 정의하여 결과를 String으로 매핑
     RowMapper<String> rowMapper = new SingleColumnRowMapper<>(String.class);
 
     Map<String, Object> resultMap = jdbcTemplate.queryForMap(imagePathQuery, id);
-    String imagePath = (String) resultMap.get("imagePath"); // 결과에서 필요한 열을 추출
+    String imagePath = (String) resultMap.get("imagePath");
 
 
     if (imagePath != null && !imagePath.isEmpty()) {
-      // 파일 시스템에서 이미지 파일 삭제
+
       try {
         Path path = Paths.get(imagePath);
         Files.deleteIfExists(path);
       } catch (IOException e) {
         e.printStackTrace();
-        // 이미지 파일 삭제 오류 처리
       }
     }
-
-    // 데이터베이스에서 메뉴 항목 삭제
-    String sql = "DELETE FROM menu_table WHERE \"id\" = ?";
+    String sql = "DELETE FROM menu_table WHERE id = ?";
     jdbcTemplate.update(sql, id);
   }
 
 
   public void editMenu(DiningMenu diningMenu) {
     String sql =
-        "UPDATE menu_table SET \"menuName\" = ?, \"brand\" = ?, \"category\" = ?, \"image\" = ?, \"weight\" = ?, \"calories\" = ?, \"protein\" = ?, \"sodium\" = ?, \"sugar\" = ?, \"saturatedFat\" = ?, \"allergy\" = ?, \"origin\" = ? \"price\" = ? \"mainMenu\" = ? \"hotMenu\" = ? WHERE \"id\" = ?";
+        "UPDATE menu_table SET menuName = ?, brand = ?, category = ?, image = ?, weight = ?, calories = ?, protein = ?, sodium = ?, sugar = ?, saturatedFat = ?, allergy = ?, origin = ?, price = ?, mainMenu = ?, hotMenu = ? WHERE id = ?";
+
     jdbcTemplate.update(sql, diningMenu.getMenuName(), diningMenu.getBrand(),
         diningMenu.getCategory(), diningMenu.getImage(), diningMenu.getWeight(),
         diningMenu.getCalories(), diningMenu.getProtein(), diningMenu.getSodium(),
@@ -79,7 +76,7 @@ public class DiningMenuService {
   }
 
   public Optional<DiningMenu> getMenuById(Long id) {
-    String sql = "SELECT * FROM menu_table WHERE \"id\" = ?";
+    String sql = "SELECT * FROM menu_table WHERE id = ?";
 
     List<Map<String, Object>> rows = jdbcTemplate.queryForList(sql, id);
 
@@ -88,7 +85,7 @@ public class DiningMenuService {
     } else {
       Map<String, Object> row = rows.get(0);
       DiningMenu diningMenu = new DiningMenu();
-      diningMenu.setId(((BigDecimal) row.get("id")).longValue());
+      diningMenu.setId((Integer) row.get("id"));
       diningMenu.setMenuName((String) row.get("menuName"));
       diningMenu.setBrand((String) row.get("brand"));
       diningMenu.setCategory((String) row.get("category"));
@@ -107,5 +104,68 @@ public class DiningMenuService {
       return Optional.of(diningMenu);
     }
   }
+
+
+  public List<DiningMenu> getMenusByBrandAndMainMenu(String brand, String mainMenu) {
+    try {
+      List<DiningMenu> menus = diningMenuDao.findByBrandAndMainMenu(brand, mainMenu);
+      if (menus.isEmpty()) {
+        throw new Exception(
+            "No menus found for the brand: " + brand + " and main menu: " + mainMenu);
+      }
+      return menus;
+    } catch (Exception e) {
+      // 여기에 로깅 또는 다른 예외 처리 로직을 구현하세요.
+      throw new ServiceException("Error occurred while fetching menus", e);
+    }
+  }
+
+  public List<DiningMenu> findHotMenusByBrand(String brand) {
+    return diningMenuDao.findByBrandAndHotMenu(brand, "a");
+  }
+
+  public List<DiningMenu> findMenusByCategory(String category) {
+    return diningMenuDao.findMenusByCategory(category);
+  }
+
+  public void copyMenuById(Long menuId) {
+    DiningMenu originalMenu = diningMenuDao.findById(menuId);
+    if (originalMenu != null) {
+      DiningMenu copiedMenu = new DiningMenu(originalMenu);
+      copiedMenu.setId(null);
+      diningMenuDao.save(copiedMenu);
+    }
+  }
+
+  public List<DiningMenu> getHotMenus(String brand, String hotMenu) {
+    String sql = "SELECT * FROM menu_table WHERE brand = ? AND hotMenu = ?";
+
+    List<DiningMenu> menus = new ArrayList<>();
+    List<Map<String, Object>> rows = jdbcTemplate.queryForList(sql, brand, hotMenu);
+
+    for (Map<String, Object> row : rows) {
+      DiningMenu diningMenu = new DiningMenu();
+      diningMenu.setId((Integer) row.get("id"));
+      diningMenu.setMenuName((String) row.get("menuName"));
+      diningMenu.setBrand((String) row.get("brand"));
+      diningMenu.setCategory((String) row.get("category"));
+      diningMenu.setImage((String) row.get("image"));
+      diningMenu.setWeight((String) row.get("weight"));
+      diningMenu.setCalories((String) row.get("calories"));
+      diningMenu.setProtein((String) row.get("protein"));
+      diningMenu.setSodium((String) row.get("sodium"));
+      diningMenu.setSugar((String) row.get("sugar"));
+      diningMenu.setSaturatedFat((String) row.get("saturatedFat"));
+      diningMenu.setAllergy((String) row.get("allergy"));
+      diningMenu.setOrigin((String) row.get("origin"));
+      diningMenu.setPrice((String) row.get("price"));
+      diningMenu.setMainMenu((String) row.get("mainMenu"));
+      diningMenu.setHotMenu((String) row.get("hotMenu"));
+      menus.add(diningMenu);
+    }
+
+    return menus;
+  }
+
 }
 

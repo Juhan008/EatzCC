@@ -7,18 +7,49 @@
 
 <body>
     <div th:fragment="quickButtonFragment" class="quickButton-wrapper">
-        <div class="quickButton-cont">
-            <div class="quickButton-slide"><div class="quickButton-img quickButton-coupon"></div><div>쿠폰</div></div>
-            <div class="quickButton-slide"><div class="quickButton-img quickButton-event"></div><div>이벤트</div></div>
-            <div class="quickButton-slide"><div class="quickButton-img quickButton-exchangeTicket"></div><div>제품교환권</div></div>
-            <div class="quickButton-slide"><div class="quickButton-img quickButton-shopping"></div><div>MD</div></div>
-            <div class="quickButton-slide"><div class="quickButton-img quickButton-stamp"></div><div>스탬프</div></div>
-            <div class="quickButton-slide"><div class="quickButton-img quickButton-EATZcard"></div><div>EATZ 카드</div></div>
-            <div class="quickButton-slide"><div class="quickButton-img quickButton-myStore"></div><div>나의 매장</div></div>
+        <div class="scroll-container">
+            <button class="scroll-btn left scroll-quickButton"></button>
+            <div class="scrollable-content">
+                <div class="quickButton-cont">
+                    <div class="quickButton-slide"><a href="#" class="quickButton-slide-a">
+                            <div class="quickButton-img quickButton-coupon"></div>
+                            <div class="quick-name">쿠폰</div>
+                        </a>
+                    </div>
+                    <div class="quickButton-slide"><a href="#" class="quickButton-slide-a">
+                            <div class="quickButton-img quickButton-event"></div>
+                            <div class="quick-name">이벤트</div>
+                        </a>
+                    </div>
+                    <div class="quickButton-slide"><a href="#" class="quickButton-slide-a">
+                            <div class="quickButton-img quickButton-exchangeTicket"></div>
+                            <div class="quick-name">제품교환권</div>
+                        </a>
+                    </div>
+                    <div class="quickButton-slide"><a href="#" class="quickButton-slide-a">
+                            <div class="quickButton-img quickButton-shopping"></div>
+                            <div class="quick-name">MD</div>
+                        </a>
+                    </div>
+                    <div class="quickButton-slide"><a href="#" class="quickButton-slide-a">
+                            <div class="quickButton-img quickButton-stemp"></div>
+                            <div class="quick-name">스탬프</div>
+                        </a>
+                    </div>
+                    <div class="quickButton-slide"><a href="#" class="quickButton-slide-a">
+                            <div class="quickButton-img quickButton-EATZcard"></div>
+                            <div class="quick-name">EATZ 카드</div>
+                        </a>
+                    </div>
+                    <div class="quickButton-slide"><a href="#" class="quickButton-slide-a">
+                            <div class="quickButton-img quickButton-myStore"></div>
+                            <div class="quick-name">나의 매장</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="scroll-btn right scroll-quickButton"></button>
         </div>
-    </div>
-    </div>
-    </div>
     </div>
 </body>
 

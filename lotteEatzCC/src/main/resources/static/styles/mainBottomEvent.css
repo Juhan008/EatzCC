@@ -1,0 +1,188 @@
+.mainBottomEvent-wrapper{
+    width: 720px;
+}
+.mainBottomEvent-cont{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.mainBottomEvent-top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.mainBottomEvent-title, .mainBottomEvent-title-end{
+    display: flex;
+    align-items: center;
+    
+}
+.mainBottomEvent-row{
+    display: flex;
+}
+.mainBottomEvent-title-front{
+    font-size: 22px;
+    font-weight: 500;
+}
+.mainBottomEvent-title-back{
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 5px;
+}
+.mainBottomEvent-frame{
+width: 260px;
+height: 237px;
+margin-right: 10px;
+}
+.mainBottomEvent-frame-img{
+width: 260px;
+height: 146px;
+border-radius: 4px;
+}
+.mainBottomEvent-frame-cont{
+    display: flex;
+    margin-top: 10px;
+}
+.mainBottomEvent-frame-brand-angel{
+    display: flex;
+    justify-content: center;
+    width: 57px;
+    height: 22px;
+    background-color: rgba(170, 148, 129, 0.1);
+    border-color: rgba(170, 148, 129, 0.1);
+    align-items: center;
+    font-size: 12;
+    color: #AA9481;
+    font-weight: 600;
+    align-items: center;
+    border-radius: 4px;
+}
+.mainBottomEvent-frame-brand-kkd{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 22px;
+    background-color: rgba(28, 172, 104, 0.1);
+    border-color: rgba(28, 172, 104, 0.1);
+    align-items: center;
+    font-size: 12;
+    color: #1CAC68;
+    font-weight: 600;
+    align-items: center;
+    border-radius: 4px;
+}
+.mainBottomEvent-frame-brand-ria{
+    display: flex;
+    justify-content: center;
+    width: 57px;
+    height: 22px;
+    border-color: rgba(239, 61, 46, 0.1);
+    background-color: rgba(239, 61, 46, 0.1);
+    align-items: center;
+    font-size: 12;
+    color: #EF3D2E;
+    font-weight: 600;
+    align-items: center;
+    border-radius: 4px;
+}
+.mainBottomEvent-frame-info-kind1{
+    margin-top: 0px;
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+    line-height: 21px;
+    letter-spacing: -0.025em;
+    color: #666;
+    text-align: center;
+    vertical-align: top;
+    border-radius: 4px;
+    width: 38px;
+    font-weight: 600;
+    background-color: #fff;
+    color: #666;
+    border: 1px solid #DDE0E3;
+    height: 20px;
+    margin-left: 3px;
+}
+.mainBottomEvent-frame-info-kind2{
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+    line-height: 21px;
+    letter-spacing: -0.025em;
+    color: #666;
+    text-align: center;
+    vertical-align: top;
+    border-radius: 4px;
+    width: 60px;
+    font-weight: 600;
+    background-color: #fff;
+    color: #666;
+    border: 1px solid #DDE0E3;
+    height: 20px;
+    margin-left: 3px;
+}
+.mainBottomEvent-frame-info-kind3{
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+    line-height: 21px;
+    letter-spacing: -0.025em;
+    color: #666;
+    text-align: center;
+    vertical-align: top;
+    border-radius: 4px;
+    width: 94px;
+    font-weight: 600;
+    background-color: #fff;
+    color: #666;
+    border: 1px solid #DDE0E3;
+    height: 20px;
+    margin-left: 3px;
+}
+.mainBottomEvent-frame-title{
+margin-top: 9px;
+display: block;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.025em;
+    font-weight: 600;
+    color: #000;
+}
+.mainBottomEvent-frame-date{
+margin-top: 7px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.025em;
+    color: #999;
+}
+.mainBottomEvent-1{
+    background: url(/images/webdevelop/optimize.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 1;
+}
+.mainBottomEvent-2{
+    background: url(/images/webdevelop/optimize1.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 1;
+
+}
+.mainBottomEvent-3{
+    background: url(/images/webdevelop/optimize2.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 1;
+}
+.mainBottomEvent-4{
+    background: url(/images/webdevelop/optimize3.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 1;
+}
+.mainBottomEvent-5{
+    background: url(/images/webdevelop/optimize4.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 1;
+}

@@ -16,7 +16,7 @@ public class UserDao {
   private RowMapper<User> mapper = new RowMapper<User>() {
     @Override
     public User mapRow(ResultSet rs, int rowNum) throws SQLException {
-      return new User(rs.getLong("id"), rs.getString("userId"), rs.getString("userPassword"),
+      return new User(rs.getInt("id"), rs.getString("userId"), rs.getString("userPassword"),
           rs.getString("name"), rs.getString("phone"), rs.getDate("birth"),
           rs.getTimestamp("createdAt"), rs.getString("member"));
     }
@@ -24,13 +24,13 @@ public class UserDao {
 
   public void add(User user) {
     jdbcTemplate.update(
-        "INSERT INTO users_table (\"userId\", \"userPassword\", \"name\", \"phone\", \"birth\", \"member\") VALUES (?, ?, ?, ?, ?, ?)",
+        "INSERT INTO users_table (userId, userPassword, name, phone, birth, member) VALUES (?, ?, ?, ?, ?, ?)",
         user.getUserId(), user.getUserPassword(), user.getName(), user.getPhone(), user.getBirth(),
         user.getMember());
   }
 
   public User get(String userId) {
-    return jdbcTemplate.queryForObject("SELECT * FROM users_table WHERE \"userId\" = ?", mapper,
+    return jdbcTemplate.queryForObject("SELECT * FROM users_table WHERE userId = ?", mapper,
         userId);
   }
 }

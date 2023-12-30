@@ -92,7 +92,7 @@
 .prevButton {
   background-image: url(/images/webdevelop/ui_ico_swiper_arr_h40.svg);
   background-size: cover;
-  margin: 0%;
+  margin: 0px 0px 0px -20px;
   transform: scaleX(-1);
   transition: opacity 0.23s;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
@@ -107,7 +107,7 @@
 .nextButton {
   background-image: url(/images/webdevelop/ui_ico_swiper_arr_h40.svg);
   background-size: cover;
-  margin: 0%;
+  margin: 0px -20px 0px 0px;
   transition: opacity 0.23s;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.8);

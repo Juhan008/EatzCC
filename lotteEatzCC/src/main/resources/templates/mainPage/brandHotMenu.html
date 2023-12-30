@@ -10,8 +10,8 @@
         <div class="brandHotMenu-cont">
             <div class="brandHotMenu-top">
                 <div class="brandHotMenu-title">
-                    <div class="brandHotMenu-title-front"></div>
-                    <div class="brandHotMenu-title-back"></div>
+                    <div class="brandHotMenu-title-front">브랜드별</div>
+                    <div class="brandHotMenu-title-back">인기메뉴</div>
                 </div>
                 <div class="brandHotMenu-order">
                     <button class="brandHotMenu-order-btn">
@@ -22,26 +22,153 @@
             </div>
             <div class="brandHotMenu-brand-btn-row">
                 <button>플레:이팅</button>
+                <div class="aplomb-var"></div>
                 <button>롯데리아</button>
+                <div class="aplomb-var"></div>
                 <button>엔제리너스</button>
+                <div class="aplomb-var"></div>
                 <button>크리스피크림 도넛</button>
             </div>
             <div class="brandHotMenu-menu-frame">
-                <div class="brandHotMenu-menu-img"></div>
-                <div class="brandHotMenu-menu-frame-title"></div>
-                <div class="brandHotMenu-menu-price"><span class="brandHotMenu-menu-unit">원</span></div>
             </div>
             <div class="brandHotMenu-bottum">
                 <div class="brandHotMenu-bottum-line"></div>
                 <div class="brandHotMenu-bottum-link">
-                    <button>
+                    <a href="#"><div class="brandHotMenu-bottum-link-cont">
                         <div class="more-text-brand"></div>
                         <div class="more-text">메뉴 보러가기</div>
-                        <div class="more-ico"></div>
-                    </button>
+                        <div class="more-ico"></div></div>
+                    </a>
                 </div>
             </div>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+               
+                const buttons = document.querySelectorAll('.brandHotMenu-brand-btn-row button');
+                const initialButton = buttons[0];
+
+                setActiveButton(initialButton);
+
+             
+                buttons.forEach(button => {
+                    button.addEventListener('click', function () {
+                        
+                        setActiveButton(this);
+                        const brandName = this.textContent.trim();
+                        fetchMenuData(brandName);
+                    });
+                });
+
+                
+                function setActiveButton(button) {
+                    buttons.forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+
+                    button.classList.add('active'); 
+                }
+
+               
+                initialButton.click();
+            });
+
+            document.querySelectorAll('.brandHotMenu-brand-btn-row button').forEach(button => {
+                button.addEventListener('click', function () {
+                    const brandName = this.textContent.trim();
+                    fetchMenuData(brandName);
+                });
+            });
+
+            function fetchMenuData(brandName) {
+                axios.get('/brandhotmanu?brand=' + encodeURIComponent(brandName))
+                    .then(response => {
+
+                        const menus = response.data.filter(menu => menu !== null && menu !== undefined);
+                        updateMenuDisplay(menus);
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
+
+            function updateMenuDisplay(menus) {
+                const menuFrame = document.querySelector('.brandHotMenu-menu-frame');
+                menuFrame.innerHTML = '';
+
+                menus.forEach(menu => {
+                    if (menu.price !== null && menu.price !== undefined) {
+                        const menuDiv = document.createElement('div');
+                        menuDiv.className = 'brandHotMenu-menu-frame-outer';
+
+                        menuDiv.innerHTML = `
+        <div class="brandHotMenu-menu-img" style="background-image: url('${menu.image}')"></div>
+        <div class="brandHotMenu-menu-frame-title">${menu.menuName}</div>
+        <div class="brandHotMenu-menu-price">${menu.price}<span class="brandHotMenu-menu-unit">원</span></div>
+    `;
+
+                        menuFrame.appendChild(menuDiv);
+                    } else {
+                        const menuDiv = document.createElement('div');
+                        menuDiv.className = 'brandHotMenu-menu-frame-outer';
+
+                        menuDiv.innerHTML = `
+        <div class="brandHotMenu-menu-img" style="background-image: url('${menu.image}')"></div>
+        <div class="brandHotMenu-menu-frame-title">${menu.menuName}</div>
+    `;
+
+                        menuFrame.appendChild(menuDiv);
+                    }
+
+                });
+            }
+            const colors = ['#222', '#EF3D2E', '#AA9481', '#1CAC68'];
+
+            const buttons = document.querySelectorAll('.brandHotMenu-brand-btn-row button');
+            const brandText = document.querySelector('.more-text-brand');
+            const brandLink = document.querySelector('.brandHotMenu-bottum-link a');
+
+            let activeButton = null;
+
+            buttons.forEach((button, index) => {
+                button.addEventListener('click', function () {
+
+                    brandText.textContent = this.textContent.trim();
+                    brandText.style.color = colors[index];
+
+                    switch (index) {
+                        case 0:
+                            brandLink.href = "1";
+                            break;
+                        case 1:
+                            brandLink.href = "2";
+                            break;
+                        case 2:
+                            brandLink.href = "3";
+                            break;
+                        case 3:
+                            brandLink.href = "4";
+                            break;
+                        default:
+                            brandLink.href = "#";
+                    }
+                    setActiveButton(this);
+                });
+            });
+
+            function setActiveButton(button) {
+                if (activeButton !== button) {
+
+                    if (activeButton !== null) {
+                        activeButton.classList.remove('active');
+                    }
+                    button.classList.add('active');
+                    activeButton = button;
+                }
+            }
+
+        </script>
+
     </div>
 </body>
 

@@ -25,10 +25,6 @@ public class DiningMenuController {
     this.diningMenuService = diningMenuService;
   }
 
-  @GetMapping("/admin/menuadd")
-  public String showRegistrationPage() {
-    return "/admin/menuadd";
-  }
 
   @PostMapping("/submitMenu")
   public String submitMenu(@RequestParam("menuName") String menuName,
@@ -44,9 +40,7 @@ public class DiningMenuController {
       String originName = file.getOriginalFilename();
       String ext = originName.substring(originName.lastIndexOf("."));
       String randomName = UUID.randomUUID().toString() + ext;
-      String savePath =
-          "/Users/limjuhan/eclipse-workspace/lotteEatzCC/src/main/resources/static/images/menu/"
-              + randomName;
+      String savePath = "/root/lotteEatzCC/src/main/resources/static/images/menu/" + randomName;
       Path path = Paths.get(savePath);
       Files.copy(file.getInputStream(), path);
 
@@ -82,28 +76,10 @@ public class DiningMenuController {
     return "/admin/menuinfo"; // 성공 페이지 리디렉션
   }
 
-  @GetMapping("/admin/menuinfo")
-  public String getMenuInfo(Model model) {
-    model.addAttribute("menus", diningMenuService.getAllMenus());
-    return "/admin/menuinfo";
-  }
-
-  @GetMapping("/admin/editMenuForm")
-  public String editMenuForm(@RequestParam("id") Long id, Model model) {
-    Optional<DiningMenu> diningMenuOpt = diningMenuService.getMenuById(id);
-    if (diningMenuOpt.isPresent()) {
-      model.addAttribute("menu", diningMenuOpt.get());
-      return "admin/editMenuForm";
-    } else {
-      // 에러 처리 또는 다른 페이지로 리디렉션
-      return "redirect:/errorPage";
-    }
-  }
-
 
 
   @PostMapping("/admin/editMenu")
-  public String editMenu(@RequestParam("id") Long id, @RequestParam("menuName") String menuName,
+  public String editMenu(@RequestParam("id") Integer id, @RequestParam("menuName") String menuName,
       @RequestParam("brand") String brand, @RequestParam("category") String category,
       @RequestParam("image") String image, @RequestParam("weight") String weight,
       @RequestParam("calories") String calories, @RequestParam("protein") String protein,
@@ -117,11 +93,43 @@ public class DiningMenuController {
     return "redirect:/admin/menuinfo";
   }
 
+  @GetMapping("/admin/menuadd")
+  public String showRegistrationPage() {
+    return "/admin/menuadd";
+  }
 
+  @GetMapping("/brand/lotteria")
+  public String brandLotteriaPage() {
+    return "/brand/lotteria";
+  }
+
+
+  @GetMapping("/admin/menuinfo")
+  public String getMenuInfo(Model model) {
+    model.addAttribute("menus", diningMenuService.getAllMenus());
+    return "/admin/menuinfo";
+  }
+
+  @GetMapping("/admin/editMenuForm")
+  public String editMenuForm(@RequestParam("id") Long id, Model model) {
+    Optional<DiningMenu> diningMenuOpt = diningMenuService.getMenuById(id);
+    if (diningMenuOpt.isPresent()) {
+      model.addAttribute("menu", diningMenuOpt.get());
+      return "admin/editMenuForm";
+    } else {
+      return "redirect:/errorPage";
+    }
+  }
 
   @PostMapping("/admin/deleteMenu")
   public String deleteMenu(@RequestParam("menuId") Long id) {
     diningMenuService.deleteMenu(id);
+    return "redirect:/admin/menuinfo";
+  }
+
+  @PostMapping("/admin/copyMenu")
+  public String copyMenu(@RequestParam("menuId") Long menuId) {
+    diningMenuService.copyMenuById(menuId);
     return "redirect:/admin/menuinfo";
   }
 }

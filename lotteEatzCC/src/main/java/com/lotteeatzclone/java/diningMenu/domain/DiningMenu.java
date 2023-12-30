@@ -9,7 +9,7 @@ import lombok.NonNull;
 @NoArgsConstructor
 @AllArgsConstructor
 public class DiningMenu {
-  private Long id;
+  private Integer id;
 
   @NonNull
   private String menuName;
@@ -34,4 +34,23 @@ public class DiningMenu {
   private String price;
   private String mainMenu;
   private String hotMenu;
+
+  public DiningMenu(DiningMenu other) {
+    this.id = null; // 새 객체는 새 ID를 가져야 합니다.
+    this.menuName = other.menuName;
+    this.brand = other.brand;
+    this.category = other.category;
+    this.image = other.image;
+    this.weight = other.weight;
+    this.calories = other.calories;
+    this.protein = other.protein;
+    this.sodium = other.sodium;
+    this.sugar = other.sugar;
+    this.saturatedFat = other.saturatedFat;
+    this.allergy = other.allergy;
+    this.origin = other.origin;
+    this.price = other.price;
+    this.mainMenu = other.mainMenu;
+    this.hotMenu = other.hotMenu;
+  }
 }

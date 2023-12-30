@@ -12,10 +12,10 @@
 				<ul class="user-menu">
 					<li class="user-item">
 						<a href="" class="user-menu-li">
-							<!-- 세션에 'userId'가 없으면 (로그인하지 않은 상태) 로그인 버튼 표시 -->
+							
 							<a th:if="${session.userId == null}" href="/login">로그인</a>
-						
-							<!-- 세션에 'userId'가 있으면 (로그인한 상태) 로그아웃 버튼 표시 -->
+
+							
 							<form th:if="${session.userId != null}" action="/logout" method="post">
 								<button type="submit">로그아웃</button>
 							</form>
@@ -30,10 +30,11 @@
 				</ul>
 			</div>
 			<hr>
-			<div class="header-bottom">
-				<h1 class="header-logo">
-					<a href="/index" class="/main"><span class="offscreen">LOTTE EATZ</span></a>
-				</h1>
+			<div class="header-bottom"><a href="/" class="/main">
+					<h1 class="header-logo">
+						<span class="offscreen">LOTTE EATZ</span>
+					</h1>
+				</a>
 				<ul class="header-deq1">
 					<li class="header-deq2-li">
 						<button type="button" class="header-deq2-btn">브랜드</button>
@@ -42,13 +43,13 @@
 								<a href="/brand/lotteria" class="header-deq3-btn">롯데리아</a>
 							</li>
 							<li class="header-dep3">
-								<a href="/brand/angelinus" class="header-deq3-btn">엔제리너스</a>
+								<a href="#" class="header-deq3-btn">엔제리너스</a>
 							</li>
 							<li class="header-dep3">
-								<a href="/brand/Krispykreme" class="header-deq3-btn">크리스피크림</a>
+								<a href="#" class="header-deq3-btn">크리스피크림</a>
 							</li>
 							<li class="header-dep3">
-								<a href="/brand/plating" class="header-deq3-btn">플레:이팅</a>
+								<a href="#" class="header-deq3-btn">플레:이팅</a>
 							</li>
 						</ul>
 					</li>
@@ -56,16 +57,16 @@
 						<button type="button" class="header-deq2-btn">이벤트</button>
 						<ul class="header-dep3-menu">
 							<li class="header-dep3">
-								<a href="/event/main" class="header-deq3-btn">이벤트</a>
+								<a href="#" class="header-deq3-btn">이벤트</a>
 							</li>
 							<li class="header-dep3">
-								<a href="/event/roulet/list" class="header-deq3-btn">룰렛</a>
+								<a href="#" class="header-deq3-btn">룰렛</a>
 							</li>
 							<li class="header-dep3">
-								<a href="/eatzTv/list" class="header-deq3-btn">EATZ TV</a>
+								<a href="#" class="header-deq3-btn">EATZ TV</a>
 							</li>
 							<li class="header-dep3">
-								<a href="/event/check/main" class="header-deq3-btn">출석체크</a>
+								<a href="#" class="header-deq3-btn">출석체크</a>
 							</li>
 						</ul>
 					</li>
@@ -73,16 +74,16 @@
 						<button type="button" class="header-deq2-btn">스토어</button>
 						<ul class="header-dep3-menu">
 							<li class="header-dep3">
-								<a href="/store/main" class="header-deq3-btn">전체</a>
+								<a href="#" class="header-deq3-btn">전체</a>
 							</li>
 							<li class="header-dep3">
-								<a href="/store/coupon/main" class="header-deq3-btn">쿠폰</a>
+								<a href="#" class="header-deq3-btn">쿠폰</a>
 							</li>
 							<li class="header-dep3">
-								<a href="/eatzCard/cardList" class="header-deq3-btn">EATZ카드</a>
+								<a href="#" class="header-deq3-btn">EATZ카드</a>
 							</li>
 							<li class="header-dep3">
-								<a href="/store/shopping" class="header-deq3-btn">쇼핑</a>
+								<a href="#" class="header-deq3-btn">쇼핑</a>
 							</li>
 						</ul>
 					</li>
@@ -90,16 +91,16 @@
 						<button type="button" class="header-deq2-btn">고객지원</button>
 						<ul class="header-dep3-menu">
 							<li class="header-dep3">
-								<a href="/help/FAQ" class="header-deq3-btn">FAQ</a>
+								<a href="#" class="header-deq3-btn">FAQ</a>
 							</li>
 							<li class="header-dep3">
-								<a href="/help/notice" class="header-deq3-btn">공지사항</a>
+								<a href="#" class="header-deq3-btn">공지사항</a>
 							</li>
 							<li class="header-dep3">
-								<a href="/help/survey" class="header-deq3-btn">설문조사</a>
+								<a href="#" class="header-deq3-btn">설문조사</a>
 							</li>
 							<li class="header-dep3">
-								<a href="/help/voc" class="header-deq3-btn">고객의 소리</a>
+								<a href="#" class="header-deq3-btn">고객의 소리</a>
 							</li>
 						</ul>
 					</li>

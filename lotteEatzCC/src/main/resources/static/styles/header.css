@@ -1,197 +1,305 @@
-#header{width :100%
+#header {
+  width: 100%
 }
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 14px;
-    font-weight: 400;
-    font-style: normal;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
 }
+
 .header-top {
-    z-index: 11;
-    position: relative;
-    overflow: hidden;
-    height: 30px;
-    max-width: 1150px;
-    padding: 5px 20px;
-    margin: 0 auto;
-    text-align: right;
-    flex-direction: row-reverse;
+  z-index: 11;
+  position: relative;
+  overflow: hidden;
+  height: 30px;
+  max-width: 1150px;
+  padding: 5px 20px;
+  margin: 0 auto;
+  text-align: right;
+  flex-direction: row-reverse;
 }
+
 .header-bottom {
-    z-index: 11;
-    position: relative;
-    max-width: 1150px;
-    height: 90px;
-    padding: 0 20px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
+  z-index: 11;
+  position: relative;
+  max-width: 1150px;
+  height: 90px;
+  padding: 0 20px 0 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
 }
+
 .user-menu {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
-.user-menu .user-item{
-    display: inline-block;
-    padding: 6px 0;
-    vertical-align: top;
-    font-size: 13px;
-    line-height: 18px;
-    letter-spacing: -0.025em;
-    color: #666;
-    margin-left: 20px;
+
+.user-menu .user-item {
+  display: inline-block;
+  padding: 6px 0;
+  vertical-align: top;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.025em;
+  color: #666;
+  margin-left: 20px;
 }
+
 a:visited {
-    color: inherit;
+  color: inherit;
 }
+
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
+
 .header-wrapper:after {
-    z-index: 11;
-    display: block;
-    position: absolute;
-    top: 40px;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: #DDE0E3;
+  z-index: 11;
+  display: block;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #DDE0E3;
 }
+
 hr {
-    height: 1px;
-    background-color: #DDE0E3;
-    border: none;
-    margin: 0%;
+  height: 1px;
+  background-color: #DDE0E3;
+  border: none;
+  margin: 0%;
 }
+
 .header-deq1 {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    margin-left: 60px;
-    font-size: 0;
-  }
-  
-  .header-deq2-li {
-    position: relative;
-    margin-right: 20px;
-  }
-  
-  .header-deq2-btn {
-    background: none;
-    border: none;
-    cursor: pointer;  
-    color: #000;
-    width: 117px;
-    display: block;
-    padding: 12px 0;
-    vertical-align: top;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: -0.025em;
-    font-weight: 600;
-    text-align: left;
-  }
-  
-  .header-deq2-btn:hover {
-    color: #49a3b6;
-  }
-.header-logo{
-    display: block;
-    padding: 10px 0;
-    background: url(/images/webdevelop/comm_header_logo.svg) center no-repeat;
-    background-size: 72px 40px;
-    width: 72px;
-    height: 60px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  margin-left: 60px;
+  font-size: 0;
 }
-  .header-dep3-menu {
-    position: absolute;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    z-index: 11;
-    padding: 20px 200px 40px 0;
+
+.header-deq2-li {
+  position: relative;
+  margin-right: 20px;
+}
+
+.header-deq2-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  width: 117px;
+  display: block;
+  padding: 12px 0;
+  vertical-align: top;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+  text-align: left;
+}
+
+.header-deq2-btn:hover {
+  color: #49a3b6;
+}
+
+.header-logo {
+  display: block;
+  padding: 10px 0;
+  background: url(/images/webdevelop/comm_header_logo.svg) center no-repeat;
+  background-size: 72px 40px;
+  width: 72px;
+  height: 60px;
+}
+
+.header-dep3-menu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 11;
+  padding: 20px 200px 40px 0;
+}
+
+.header-deq1:hover .header-dep3-menu {
+  display: block;
+}
+
+.header-deq2-li:hover .header-dep3-menu {
+  display: block;
+}
+
+.header-dep3-menu li a {
+  color: #000;
+  padding: 5px 16px;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap;
+
+}
+
+.header-deq2-btn,
+.header-dep3-menu a {
+  color: #000;
+  padding: 8px 15px;
+  text-decoration: none;
+  display: block;
+  transition: color 0.14s ease-in;
+}
+
+.header-dep3-menu li a:hover {
+  color: #49a3b6;
+}
+
+.header-wrapper {
+  transition: height 0.14s ease-in;
+}
+
+@keyframes opacityActive {
+  to {
+    opacity: 1;
   }
-  .header-deq1:hover .header-dep3-menu {
-    display: block;
-  }
-  .header-deq2-li:hover .header-dep3-menu {
-    display: block;
-  }
-  .header-dep3-menu li a {
-    color: #000;
-    padding: 5px 16px;
-    font-weight: 500;
-    text-decoration: none;
-    display: block;
-    white-space: nowrap;
-    
-  }
-  .header-deq2-btn, .header-dep3-menu a {
-    color: #000;
-    padding: 8px 15px;
-    text-decoration: none;
-    display: block;
-    transition: color 0.14s ease-in;
-  }
-  .header-dep3-menu li a:hover {
-    color: #49a3b6;
-  }
-  .header-wrapper {
-    transition: height 0.14s ease-in;
-  }
-  
-  @keyframes opacityActive {
-    to {
-      opacity: 1;
-    }
-  }
+}
 
 .header-wrapper.show-sub-gnb-sub-gnb-layer {
-    animation: opacityActive 0.14s ease-in forwards;
+  animation: opacityActive 0.14s ease-in forwards;
 }
-  .ico-header-cart{
-    background: url(/images/webdevelop/comm_ico_cart.svg) 0 0 no-repeat;
-    background-size: cover;
-    width: 24px;
-    height: 24px;
-  }
-  .ico-header-cart{
-    background: url(/images/webdevelop/comm_ico_my.svg) 0 0 no-repeat;
-    background-size: cover;
-    width: 24px;
-    height: 24px;
-  }
-  .util-menu {
-    margin-left: auto;
-    font-size: 0;
+
+.ico-header-cart {
+  background: url(/images/webdevelop/comm_ico_cart.svg) 0 0 no-repeat;
+  background-size: cover;
+  width: 24px;
+  height: 24px;
 }
+
+.ico-header-cart {
+  background: url(/images/webdevelop/comm_ico_my.svg) 0 0 no-repeat;
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+}
+
+.util-menu {
+  margin-left: auto;
+  font-size: 0;
+  min-width: 78px;
+}
+
 .util-menu .util-item {
   display: inline-block;
   vertical-align: top;
 }
-.btn-header-cart{
+
+.btn-header-cart {
   display: inline-block;
   width: 24px;
   height: 24px;
   background: url(/images/webdevelop/comm_ico_cart.svg) 0 0 no-repeat;
-      background-size: cover;
-      margin-right:30px;
-  }
-.btn-header-mypage{
-display: inline-block;
-width: 24px;
-height: 24px;
-background: url(/images/webdevelop/comm_ico_my.svg) 0 0 no-repeat;
-    background-size: cover;
+  background-size: cover;
+  margin-right: 30px;
 }
-a.btn-header-order, button.btn-header-order {
+
+.btn-header-mypage {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(/images/webdevelop/comm_ico_my.svg) 0 0 no-repeat;
+  background-size: cover;
+}
+
+a.btn-header-order,
+button.btn-header-order {
   color: #fff;
   padding: 0 18px;
   border-radius: 22px;
@@ -202,7 +310,9 @@ a.btn-header-order, button.btn-header-order {
   background-size: cover;
   cursor: pointer;
 }
-a.btn-header-order, button.btn-header-order:hover {
+
+a.btn-header-order,
+button.btn-header-order:hover {
   color: #fff;
   padding: 0 18px;
   border-radius: 22px;
@@ -213,9 +323,12 @@ a.btn-header-order, button.btn-header-order:hover {
   background-size: cover;
   cursor: pointer;
 }
-.header-wrapper .btn-header-order ,.header-wrapper .btn-header-order:hover{
+
+.header-wrapper .btn-header-order,
+.header-wrapper .btn-header-order:hover {
   margin-left: 30px;
 }
+
 .sub-gnb-layer {
   overflow: hidden;
   content: "";
@@ -227,15 +340,17 @@ a.btn-header-order, button.btn-header-order:hover {
   height: 130px;
   background: #fff;
   margin: 0 auto;
-} 
+}
+
 .header-dep3-menu {
   display: none;
 }
 
-.header-deq2-btn:hover + .header-dep3-menu,
+.header-deq2-btn:hover+.header-dep3-menu,
 .sub-gnb-layer:hover .header-dep3-menu {
   display: block;
 }
+
 .sub-gnb-layer:after {
   z-index: 10;
   display: block;
@@ -247,8 +362,10 @@ a.btn-header-order, button.btn-header-order:hover {
   height: 1px;
   background: #DDE0E3;
 }
+
 .sub-gnb-layer {
   position: absolute;
   /* 기존 스타일 유지 */
-  z-index: 10; /* 예시 값, 실제 적절한 값으로 조정 필요 */
+  z-index: 10;
+  /* 예시 값, 실제 적절한 값으로 조정 필요 */
 }

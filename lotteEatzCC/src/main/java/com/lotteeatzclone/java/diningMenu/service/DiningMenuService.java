@@ -13,20 +13,17 @@ import org.hibernate.service.spi.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
-import org.springframework.jdbc.core.SingleColumnRowMapper;
 import org.springframework.stereotype.Service;
 import com.lotteeatzclone.java.diningMenu.dao.DiningMenuDao;
 import com.lotteeatzclone.java.diningMenu.domain.DiningMenu;
 
 @Service
 public class DiningMenuService {
-  private final DiningMenuDao diningMenuDao;
+  private DiningMenuDao diningMenuDao;
 
   @Autowired
   private JdbcTemplate jdbcTemplate;
 
-  @Autowired
   public DiningMenuService(DiningMenuDao diningMenuDao) {
     this.diningMenuDao = diningMenuDao;
   }
@@ -43,7 +40,6 @@ public class DiningMenuService {
   public void deleteMenu(Long id) {
     String imagePathQuery = "SELECT image FROM menu_table WHERE id = ?";
 
-    RowMapper<String> rowMapper = new SingleColumnRowMapper<>(String.class);
 
     Map<String, Object> resultMap = jdbcTemplate.queryForMap(imagePathQuery, id);
     String imagePath = (String) resultMap.get("imagePath");

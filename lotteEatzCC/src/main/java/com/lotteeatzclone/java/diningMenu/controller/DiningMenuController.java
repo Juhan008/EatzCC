@@ -6,7 +6,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Optional;
 import java.util.UUID;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +19,6 @@ import com.lotteeatzclone.java.diningMenu.service.DiningMenuService;
 public class DiningMenuController {
   private final DiningMenuService diningMenuService;
 
-  @Autowired
   public DiningMenuController(DiningMenuService diningMenuService) {
     this.diningMenuService = diningMenuService;
   }

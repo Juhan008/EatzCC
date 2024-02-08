@@ -1,0 +1,111 @@
+.brandHotMenu-cont{
+    display: flex;
+    margin-top: 65px;
+    flex-direction: column;
+}
+.brandHotMenu-top{
+    display: flex;
+    justify-content: space-between;
+}
+.brandHotMenu-title, .brandHotMenu-order-btn{
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.brandHotMenu-title-front{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.brandHotMenu-title-back{
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.aplomb-var{
+    width: 1px;
+    height: 10px;
+    margin: 0px 15px 0px 13px;
+    background-color: #DDE0E3;
+}
+.brandHotMenu-brand-btn-row button{
+    color: #000;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: -0.025em;
+    line-height: 18px;
+}
+.brandHotMenu-brand-btn-row button.active{
+    color: #000;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: -0.025em;
+    line-height: 18px;
+}
+.brandHotMenu-brand-btn-row{
+    display: flex;
+}
+.brandHotMenu-menu-frame{
+    display: flex;
+    margin-bottom: 30;
+}
+.brandHotMenu-menu-frame-outer{
+margin: 20px 15px 0px 0px;
+}
+.brandHotMenu-menu-img{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 1;
+    width: 169px;
+    height: 169px;
+    position: relative;
+    border: 1px solid #EFF1F3;
+    border-radius: 4px;
+}
+.brandHotMenu-menu-frame-title{
+    white-space: pre-line;
+    word-wrap: break-word;
+    width: 169px;
+    font-weight: 550;
+    margin-top: 10;
+    margin-bottom: 10;
+}
+.brandHotMenu-menu-unit{
+    margin-right: 2px;
+    font-weight: 550;
+}
+.brandHotMenu-menu-price{
+    width: 169px;
+    font-weight: 550;
+}
+a {
+    cursor: pointer;
+    color: #000;
+}
+a:visited {
+    color: #000;
+}
+.brandHotMenu-bottum-link-cont{
+    display: flex;
+    align-items: center;
+}
+.brandHotMenu-bottum{
+    display: flex;
+    flex-direction: column;
+}
+.brandHotMenu-bottum-line{
+    border-top: 1px dotted #EFF1F3;
+    margin-bottom: 20px;
+}
+.brandHotMenu-bottum-link{
+    display: flex;
+    justify-content: center;
+}
+.more-text-brand{
+    font-weight: 600;
+}
+.more-text{
+    margin-left: 4px;
+    font-weight: 500;
+}

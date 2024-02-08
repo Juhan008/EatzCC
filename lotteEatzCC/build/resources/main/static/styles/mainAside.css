@@ -1,0 +1,191 @@
+a{
+    cursor: pointer;
+}
+button{
+    cursor: pointer;
+}
+.mainAside-cont {
+    display: flex;
+    flex-direction: column;
+    font-family: "Pretendard", "SF Pro Display", AppleSDGothicNeo-Light, Helvetica, "Malgun Gothic", "MalgunGothic", "맑은고딕", sans-serif !important;
+}
+.mainAside-wrapper{
+    padding-top: 30px;
+    padding-left: 40px;
+    width: 310px;
+}
+
+.aside-comment-top {
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: -0.025em;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.user-name-tag,
+.aside-comment-side,
+.aside-comment-side {
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: -0.025em;
+    font-weight: 600;
+    color: #000;
+}
+
+.aside-comment-eatz {
+    color: #00A5B9 !important;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: -0.025em;
+    margin-left: 5px;
+    font-weight: 600;
+}
+
+.aside-comment-mileage {
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.025em;
+    font-weight: 550;
+    margin-bottom: 20px;
+}
+
+.aside-mileage-cont {
+    position: relative;
+    margin-bottom: 7px;
+    background: rgba(239, 241, 243, 0.4);
+    border-radius: 4px;
+    width: 270px;
+    height: 72px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.aside-mileage-brand-img-outline {
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    left: 20px;
+    margin: 20px;
+
+}
+
+.aside-mileage-brand-img-ria {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/images/webdevelop/comm_ico_brand_lotteria.png) 0 0 no-repeat #D63731;
+    background-size: cover;
+    border-radius: 40px;
+}
+
+.aside-mileage-brand-img-kkd {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/images/webdevelop/comm_ico_brand_krispy.png) 0 0 no-repeat #31955B;
+    background-size: cover;
+    border-radius: 40px;
+}
+
+.aside-mileage-brand-img-angel {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/images/webdevelop/comm_ico_brand_angelinus.png) 0 0 no-repeat #DBD6CB;
+    background-size: cover;
+    border-radius: 40px;
+}
+
+.aside-mileage-brand-name {
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.025em;
+    font-weight: 600;
+    color: #000;
+}
+
+.aside-mileage-brand-subcomment {
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.025em;
+    color: #666;
+}
+
+.aside-link {
+    display: flex;
+}
+
+.aside-link-item {
+    height: 100px;
+    width: 132px;
+}
+
+.aside-link-ria {
+    background: url(/images/webdevelop/comm_bg_lotteria.png) right bottom no-repeat #EF3D2E;
+    background-size: 165px 100px;
+}
+
+.aside-link-kkd {
+    background: url(/images/webdevelop/comm_bg_krispy.png) right bottom no-repeat #1CAC68;
+    background-size: 165px 100px;
+}
+
+.aside-link-angel {
+    background: url(/images/webdevelop/comm_bg_angelinus.png) right bottom no-repeat #DAD6CB;
+    background-size: 165px 100px;
+}
+
+.aside-link-plating {
+    background: url(/images/webdevelop/comm_bg_plating.png) right bottom no-repeat #222;
+    background-size: 165px 100px;
+}
+.aside-link-comment{
+    margin: 40px 0px 20px;
+    display: flex;
+}
+.aside-link{
+    margin-bottom: 7px;
+}
+.aside-link-comment-front {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.025em;
+    font-weight: 600;
+}
+
+.aside-link-comment-back {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.025em;
+    margin-left: 5px;
+    font-weight: 700;
+    margin-left: 7px;
+}
+.aside-link-item{
+    margin-left: 7px;
+    border-radius:4px;
+}
+.aside-link-brand-name {
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.025em;
+    font-weight: 600;
+    margin: 16px;
+}
+.aside-link-brand-name-angel{
+    color: #000;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.025em;
+    font-weight: 600;
+    margin: 16px;
+}

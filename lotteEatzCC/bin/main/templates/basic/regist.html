@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    
+</head>
+
+<head th:insert="~{/basic/header :: headerFragmentHead}"></head>
+
+<head th:insert="~{/basic/footer :: footerFragmentHead}"></head>
+
+<head>
+    <link rel="stylesheet" href="/styles/index.css" />
+</head>
+
+<head>
+    <link rel="stylesheet" href="/styles/regist.css" />
+    <meta charset="UTF-8">
+    <title>회원가입:LOTTE EATZ</title>
+</head>
+
+<body>
+    <div class="all-wrapper">
+        <div th:insert="~{/basic/header :: headerFragment}"></div>
+        <div class="signup-container">
+            <h2>회원가입</h2>
+            <form action="/regist" method="post">
+                <div class="input-group">
+                    <label for="name">이름</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="input-group">
+                    <label for="phone">전화번호</label>
+                    <input type="text" id="phone" name="phone">
+                </div>
+                <div class="input-group">
+                    <label for="userId">사용자 ID</label>
+                    <input type="text" id="userId" name="userId">
+                    <span id="userIdAvailability"></span> 
+                </div>
+                <div class="input-group">
+                    <label for="password">비밀번호</label>
+                    <input type="password" id="password" name="userPassword">
+                </div>
+                <div class="input-group">
+                    <label for="birth">생년월일</label>
+                    <input type="date" id="birth" name="birth">
+                </div>
+                <button type="submit" class="submit-btn">가입하기</button>
+            </form>
+        </div>
+
+    </div>
+    <div th:insert="~{/basic/footer :: footerFragment}"></div>
+    <script src="/scripts/header.js"></script>
+
+</body>
+
+</html>

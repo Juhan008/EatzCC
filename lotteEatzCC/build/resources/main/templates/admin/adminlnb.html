@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head th:fragment="adminlnbFragmentHead">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOTTE Eatz 관리자 페이지</title>
+    <link rel="stylesheet" href="/styles/admin.css">
+</head>
+<body>
+    <div th:fragment="adminlnbFragment" class="sidebar">
+        <div class="logo">LOTTE Eatz</div>
+        <ul class="menu">
+            <li class="menu-item" onclick="changeActiveMenu(this)"><a class="lnbmenu-btn" href="">회원 목록</a></li>
+            <li class="menu-item" onclick="changeActiveMenu(this)"><a class="lnbmenu-btn" href="/admin/menuadd">메뉴 등록</a></li>
+            <li class="menu-item" onclick="changeActiveMenu(this)"><a class="lnbmenu-btn" href="/admin/menuinfo">메뉴정보 관리</a></li>
+            <li class="menu-item" onclick="changeActiveMenu(this)"><a class="lnbmenu-btn" href="">상품 등록</a></li>
+            <li class="menu-item" onclick="changeActiveMenu(this)"><a class="lnbmenu-btn" href="">상품정보 관리</a></li>
+            <li class="menu-item" onclick="changeActiveMenu(this)"><a class="lnbmenu-btn" href="">매장 등록</a></li>
+            <li class="menu-item" onclick="changeActiveMenu(this)"><a class="lnbmenu-btn" href="">매장정보 관리</a></li>
+            <li class="menu-item" onclick="changeActiveMenu(this)"><a class="lnbmenu-btn" href=""></a>상담 관리</a></li>
+        </ul>
+        <script src="/scripts/admin.js"></script>
+    </div>
+    
+</body>
+</html>

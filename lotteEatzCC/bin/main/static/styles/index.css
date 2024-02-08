@@ -1,0 +1,140 @@
+.all-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+ol,
+ul,
+nav {
+    list-style: none;
+}
+
+html,
+body {
+    font-family: "Pretendard", "SF Pro Display", AppleSDGothicNeo-Light, Helvetica, "Malgun Gothic", "MalgunGothic", "맑은고딕", sans-serif !important;
+}
+
+.maincont-wrapper {
+    max-width: 1150px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-direction: row;
+    padding-bottom: 100px;
+}
+
+.th-mainTopEvent {}
+
+.business-cont-wrapper {
+    margin-left: -20px;
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 30px;
+}
+
+.aside-cont-wrapper::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    bottom: -100px;
+    width: 1px;
+    left: 0;
+    background: #DDE0E3;
+}
+
+.aside-cont-wrapper {
+    width: 310px;
+    position: relative;
+    min-height: 100%;
+    flex: 0 0 310px;
+}
+
+.scroll-container {
+    position: relative;
+}
+
+.scrollable-content {
+    overflow-x: auto;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.23s;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    margin: 0px 0px 0px 0px;
+}
+
+.scroll-btn.left {
+    left: 0;
+    background-image: url(/images/webdevelop/ui_ico_swiper_arr_h40.svg);
+    background-size: cover;
+    transform: scaleX(-1);
+}
+
+.scroll-btn.right {
+    right: 0;
+    background-image: url(/images/webdevelop/ui_ico_swiper_arr_h40.svg);
+    background-size: cover;
+
+}
+
+.scroll-btn.left.scroll-storeInfo {
+    margin: -58px 0px 0px -20px;
+}
+
+.scroll-btn.right.scroll-storeInfo {
+    margin: -38px -20px 0px 0px;
+}
+
+.scroll-btn.left.scroll-quickButton {
+    margin: -20px 0px 0px -22px;
+}
+
+.scroll-btn.right.scroll-quickButton {
+    margin: 0px -20px 0px 0px;
+}
+.scroll-btn.left.scroll-mainCoupon {
+    margin: -20px 0px 0px -22px;
+}
+
+.scroll-btn.right.scroll-mainCoupon {
+    margin: 0px -20px 0px 0px;
+}
+.scroll-btn.left.scroll-mainBottomEvent {
+    margin: -65px 0px 0px -22px;
+}
+
+.scroll-btn.right.scroll-mainBottomEvent {
+    margin: -45px -20px 0px 0px;
+}
+.scroll-btn.left.scroll-mainMedia {
+    margin: -50px 0px 0px 10px;
+}
+
+.scroll-btn.right.scroll-mainMedia {
+    margin: -30px 10px 0px 0px;
+}
+.aside-cont-wrapper {
+    height: 680px; /* 필요에 따라 조정 */
+    position: sticky;
+    top: 0; /* 뷰포트 상단에 고정 */
+}

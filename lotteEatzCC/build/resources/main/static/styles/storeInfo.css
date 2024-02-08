@@ -1,0 +1,207 @@
+.storeInfo-wrapper{
+  margin-top: 30px;
+}
+.storeInfo-cont{
+    width: 720px;
+}
+.storeInfo-guide {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.location-ion {
+    background-image: url(/images/webdevelop/comm_ico_location.svg);
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+}
+.location-address{
+    display: inline-block;
+    vertical-align: top;
+    color: #000;
+    font-weight: 600;
+    flex: 1 0 auto;
+    position: relative;
+    padding: 1px 0 1px 26px;
+    margin-right: 15px;
+}
+.location-address-search{
+   
+    padding: 2px 10px;
+    background-color: #fff;
+    border: 1px solid #D6DCE1;
+    border-radius: 20px;
+}
+.address-search-btn{
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.025em;
+    color: #000;
+}
+.storeInfo-user-pick{
+    display: flex;
+    flex-direction: row;
+}
+.storeInfo-brand-link{
+    display: flex;
+    height: 190px;
+    justify-content: flex-start;
+    width: 589px;
+}
+.storeInfo-brand-link-cont{
+    display: flex;
+}
+.storeInfo-deliveryOrPickUp{
+    display: flex;
+    flex-direction: column;
+    min-width: 87px;
+    align-items: center;
+    margin: -5px 45px 0px 0px;
+}
+.storeInfo-pickUp-pick{
+    width: 80px;
+    min-height: 74px;
+    border-radius: 0 0 4px 4px;
+}
+.storeInfo-delivery-pick{
+    width: 80px;
+    min-height: 74px;
+    border-radius: 4px 4px 0 0;
+    margin-bottom: -1px;
+    padding-bottom: 1px;
+}
+.storeInfo-store-search {
+  font-weight: 550;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.025em;
+  color: #000;
+  margin-top: 15px;
+  border-radius: 5px;
+  text-align: center;
+  height: 30px;
+  width: 82px;
+  border: 1px solid #DDE0E3;
+}
+/* .storeInfo-ico-comment{
+    min-width: 60px;
+    min-height: 18px;
+    margin-top: -23px;
+} */
+.storeInfo-ico:before {
+    content: '';
+    display: inline-block;
+    width: 24px; 
+    height: 24px;
+    background-size: cover;
+  }
+  .storeInfo-ico-comment-del {
+    display:block;
+    min-width: 60px;
+    min-height: 18px;
+    margin-top: -30px;
+  }
+  .storeInfo-ico-comment-pick {
+    display:block;
+    min-width: 60px;
+    min-height: 18px;
+    margin-top: -30px;
+  }
+  .changedTextColor {
+    color: #fff;
+
+  }
+  .storeInfo-ico-comment-del.changedTextColor, .storeInfo-ico-comment-pick.changedTextColor {
+   
+    color: #fff;
+  }
+  .storeInfo-ico-comment-del, .storeInfo-ico-comment-pick {
+    color: black;
+}
+  #delivery-button.active .storeInfo-ico:before {
+    width: 100%;
+    height: 100%;
+    background: url(/images/webdevelop/ico_addr_delevery_on.svg) 0 0 no-repeat #00A5B9;
+    background-position: 29px 14px;
+    border-radius: 4px 4px 0 0;
+  }
+  
+  #pickUp-button.active .storeInfo-ico:before {
+    width: 100%;
+    height: 100%;
+    background: url(/images/webdevelop/ico_addr_pickup_on.svg) 0 0 no-repeat #00A5B9;
+    background-position: 29px 14px;
+    border-radius: 0 0 4px 4px;
+  }
+  
+  #delivery-button .storeInfo-ico:before {
+    width: 100%;
+    height: 100%;
+    background: url(/images/webdevelop/ico_addr_delevery_off.svg) 0 0 no-repeat #ffffff;
+    border: 1px solid #DDE0E3;
+    background-position: 29px 14px;
+    border-radius: 4px 4px 0 0;
+  }
+  
+  #pickUp-button .storeInfo-ico:before {
+    width: 100%;
+    height: 100%;
+    background: url(/images/webdevelop/ico_addr_pickup_off.svg) 0 0 no-repeat #ffffff;
+    border: 1px solid #DDE0E3;
+    background-position: 29px 14px;
+    border-radius: 0 0 4px 4px;
+  }
+ 
+  .storeInfo-brand-link-cont{
+    
+    background-color: #F5F6F8;
+  }
+  .storeInfo-brand-text{
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.025em;
+    font-weight: 600;
+    color: #000;
+    margin-top: 15px;
+  }
+  .storeInfo-bottum-alt{
+    margin-top: 5px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.025em;
+    color: #999;
+  }
+  .storeInfo-brand-link-cont{
+    border-radius: 4px;
+    height: 130px;
+    width: 180px;
+    margin-right: 10px;
+  }
+  .storeInfo-lotteria-img{
+    border-radius: 4px;
+    height: 130px;
+    width: 180px;
+    background: url(/images/webdevelop/img_store_lotteria.png) 0 0 no-repeat #F5F6F8;
+    background-size: cover;
+  }
+  .storeInfo-angel-img{
+    height: 130px;
+    width: 180px;
+    background: url(/images/webdevelop/img_store_angelinus.png) 0 0 no-repeat #F5F6F8;
+    background-size: cover;
+  }
+  .storeInfo-kkd-img{
+    height: 130px;
+    width: 180px;
+    background: url(/images/webdevelop/img_store_krispy.png) 0 0 no-repeat #F5F6F8;
+    background-size: cover;
+  }
+  .storeInfo-plating-img{
+    height: 130px;
+    width: 180px;
+    background: url(/images/webdevelop/img_store_plating.png) 0 0 no-repeat #F5F6F8;
+    background-size: cover;
+  }
+  

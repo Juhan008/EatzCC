@@ -1,0 +1,76 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:insert="~{/admin/adminlnb :: adminlnbFragmentHead}"></head>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <link rel="stylesheet" href="/styles/menuinfo.css">
+</head>
+
+<body>
+    <div class="all-wrapper">
+        <div class="contents-wrapper">
+            <div th:insert="~{/admin/adminlnb :: adminlnbFragment}" class="lnb"></div>
+            <div class="contents">
+                <div class="menu-info">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>메뉴 이름</th>
+                                <th>브랜드</th>
+                                <th>카테고리</th>
+                                <th>이미지</th>
+                                <th>중량</th>
+                                <th>칼로리</th>
+                                <th>단백질</th>
+                                <th>나트륨</th>
+                                <th>당류</th>
+                                <th>포화지방</th>
+                                <th>알레르기 정보</th>
+                                <th>원산지</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="menu : ${menus}">
+                                <td th:text="${menu.menuName}"></td>
+                                <td th:text="${menu.brand}"></td>
+                                <td th:text="${menu.category}"></td>
+                                <td>
+                                    <img class="img-view" th:src="${menu.image}" alt="Menu Image" width="150px" height="150px" />
+
+                                </td>
+                                <td th:text="${menu.weight}"></td>
+                                <td th:text="${menu.calories}"></td>
+                                <td th:text="${menu.protein}"></td>
+                                <td th:text="${menu.sodium}"></td>
+                                <td th:text="${menu.sugar}"></td>
+                                <td th:text="${menu.saturatedFat}"></td>
+                                <td th:text="${menu.allergy}"></td>
+                                <td th:text="${menu.origin}"></td>
+                                <td th:text="${menu.price}"></td>
+                                <td th:text="${menu.mainMenu}"></td>
+                                <td th:text="${menu.hotMenu}"></td>
+                                <td>
+                                    <a th:href="@{/admin/editMenuForm(id=${menu.id})}">수정</a>
+                                    <form method="post" action="/admin/deleteMenu" style="display:inline;">
+                                        <input type="hidden" name="menuId" th:value="${menu.id}" />
+                                        <button type="submit">삭제</button>
+                                    </form>
+                                    <form method="post" action="/admin/copyMenu" style="display:inline;">
+                                        <input type="hidden" name="menuId" th:value="${menu.id}" />
+                                        <button type="submit">복사</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

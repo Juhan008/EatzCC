@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g id="ic_btn_search_H16" transform="translate(0 -1)">
+    <rect id="icon_H16_" data-name="icon(H16)" width="16" height="16" transform="translate(0 1)" fill="none" opacity="0.3"/>
+    <path id="패스_15072" data-name="패스 15072" d="M13.237,15.574h0L7.831,10.168" transform="translate(2)" fill="none" stroke="#000" stroke-width="1"/>
+    <g id="타원_665" data-name="타원 665" transform="translate(1.487 2)" fill="#fff" stroke="#000" stroke-width="1">
+      <circle cx="6" cy="6" r="6" stroke="none"/>
+      <circle cx="6" cy="6" r="5.5" fill="none"/>
+    </g>
+  </g>
+</svg>

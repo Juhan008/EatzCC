@@ -1,0 +1,170 @@
+.mainTopEvent-wrapper {
+  height: 320px;
+  min-width: 490px;
+  max-width: 720px;
+  width: 100%;
+}
+
+.mainTopEvent-cont {
+  height: 100%;
+  width: 100%;
+}
+
+.mainTopEvent-cont {
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.slider {
+  display: flex;
+  overflow: hidden;
+}
+
+.slide {
+  min-width: 760px;
+  transition: transform 0.5s ease;
+  position: relative;
+}
+
+
+.mainTopEvent-img1 {
+  background-image: url(/images/webdevelop/maintope1.jpeg);
+  background-size: cover;
+}
+
+.mainTopEvent-img2 {
+  background-image: url(/images/webdevelop/maintope2.jpeg);
+  background-size: cover;
+}
+
+.mainTopEvent-img3 {
+  background-image: url(/images/webdevelop/maintope3.jpeg);
+  background-size: cover;
+}
+
+.mainTopEvent-img4 {
+  background-image: url(/images/webdevelop/maintope4.jpeg);
+  background-size: cover;
+}
+
+.mainTopEvent-img5 {
+  background-image: url(/images/webdevelop/maintope5.jpeg);
+  background-size: cover;
+  position: relative;
+}
+
+.mainTopEvent-img6 {
+  background-image: url(/images/webdevelop/maintope6.jpeg);
+  background-size: cover;
+}
+
+.mainTopEvent-img7 {
+  background-image: url(/images/webdevelop/maintope7.jpeg);
+  background-size: cover;
+}
+
+.mainTopEvent-img8 {
+  background-image: url(/images/webdevelop/maintope8.jpeg);
+  background-size: cover;
+  position: relative;
+
+}
+
+.mainTopEvent-img9 {
+  background-image: url(/images/webdevelop/maintope9.jpeg);
+  background-size: cover;
+}
+
+.mainTopEvent-img10 {
+  background-image: url(/images/webdevelop/maintope10.jpeg);
+  background-size: cover;
+}
+
+.event-event-cont {
+  margin-top: -170px;
+}
+
+.event-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.prevButton {
+  background-image: url(/images/webdevelop/ui_ico_swiper_arr_h40.svg);
+  background-size: cover;
+  margin: 0px 0px 0px -20px;
+  transform: scaleX(-1);
+  transition: opacity 0.23s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.nextButton {
+  background-image: url(/images/webdevelop/ui_ico_swiper_arr_h40.svg);
+  background-size: cover;
+  margin: 0px -20px 0px 0px;
+  transition: opacity 0.23s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.slide-counter-cont {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.slide-counter-outline {
+  height: 22px;
+  width: 66px;
+  display: inline-flex;
+  flex-direction: row;
+  vertical-align: top;
+  padding: 2px 5px;
+  border-radius: 26px;
+  backdrop-filter: blur(15px) brightness(80%);
+  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  margin: 59px 43px 0px 0px;
+}
+
+.slide-counter-func {
+  width: auto;
+  height: 22px;
+}
+
+.slide-counter-func {
+  color: #fff;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  letter-spacing: -0.025em;
+  line-height: 22px;
+}
+
+.slide-counter-default {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.025em;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.67);
+}
+
+.event-more {
+  background-image: url(/images/webdevelop/ico_event_more.svg);
+  background-size: 18px;
+  width: 19px;
+  height: 19px;
+}

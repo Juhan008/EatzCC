@@ -1,0 +1,82 @@
+.quickButton-wrapper{
+    margin-top: 50px;
+    width: 720px;
+}
+.quickButton-cont {
+    display: flex;
+    justify-content: flex-start;
+    width: 589px;
+}
+
+.quickButton-slide {
+    display: flex;
+    background-color: rgba(239, 241, 243, 0.6);
+    border-radius: 4px;
+    width: 101px;
+    height: 100px;
+    margin-right: 15px;
+    justify-content: center;
+}
+.quick-name{
+    margin-top: 6px;
+    font-weight: 500;
+    text-align: center;
+    color: #000;  
+}
+.quickButton-img{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.quickButton-coupon {
+    width: 36px;
+    height: 36px;
+    background: url(/images/webdevelop/coupon-quick.png) 0 0 no-repeat rgba(239, 241, 243, 0.6);
+    background-size: cover;
+}
+
+.quickButton-event {
+    width: 36px;
+    height: 36px;
+    background: url(/images/webdevelop/event-quick.png) 0 0 no-repeat rgba(239, 241, 243, 0.6);
+    background-size: cover;
+}
+
+.quickButton-exchangeTicket {
+    width: 36px;
+    height: 36px;
+    background: url(/images/webdevelop/pt-quick.png) 0 0 no-repeat rgba(239, 241, 243, 0.6);
+    background-size: cover;
+    margin-left: 15px;
+}
+
+.quickButton-shopping {
+    width: 36px;
+    height: 36px;
+    background: url(/images/webdevelop/MD-quick.png) 0 0 no-repeat rgba(239, 241, 243, 0.6);
+    background-size: cover;
+}
+
+.quickButton-stemp {
+    width: 36px;
+    height: 36px;
+    background: url(/images/webdevelop/stemp-quick.png) 0 0 no-repeat rgba(239, 241, 243, 0.6);
+    background-size: cover;
+}
+
+.quickButton-EATZcard {
+    width: 36px;
+    height: 36px;
+    background: url(/images/webdevelop/card-quick.png) 0 0 no-repeat rgba(239, 241, 243, 0.6);
+    background-size: cover;
+}
+
+.quickButton-myStore {
+    width: 36px;
+    height: 36px;
+    background: url(/images/webdevelop/mystore-quick.png) 0 0 no-repeat rgba(239, 241, 243, 0.6);
+    background-size: cover;
+}
+.quickButton-slide-a{
+    height: 100;
+    width: 101;
+}

@@ -1,0 +1,130 @@
+.mainMedia-wrapper {
+    margin-top: 40px;
+}
+
+.mainMedia-cont {
+    background: rgba(0, 165, 185, 0.8);
+    backdrop-filter: blur(20px);
+    height: 332px;
+    width: 737px;
+}
+
+.mainMedia-top {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 0px 25px 0px;
+    padding: 35px 0px 0px 0px;
+}
+
+.mainMedia-title,
+.mainMedia-title-end {
+    display: flex;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.mainMedia-title-front {
+    color: #fff;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.mainMedia-more-btn {
+    display: flex;
+    align-items: center;
+
+}
+
+.mainMedia-title-back {
+    color: #FDCD00 !important;
+    font-weight: 550;
+    font-size: 22px;
+}
+
+
+.mainMedia-row {
+    display: flex;
+    margin-left: 40px;
+}
+
+.mainMedia-frame {
+    width: 260px;
+    height: 204px;
+    margin-right: 10;
+}
+
+.more-text-w {
+    margin-left: 4px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.mainMedia-frame-img {
+    width: 260px;
+    height: 146px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.more-ico-w {
+    background: url(/images/webdevelop/comm_ico_more_view_arr_white.svg) center no-repeat;
+    background-size: cover;
+    height: 10px;
+    width: 10px;
+}
+
+.mainMedia-frame-name {
+    white-space: pre-line;
+    word-wrap: break-word;
+    color: #fff;
+    font-weight: 500;
+    display: block;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.025em;
+}
+
+.mainMedia-frame-img-play-ico {
+    background: url(/images/webdevelop/ui_ico_play_video.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 37px;
+    height: 49px;
+}
+
+.video1 {
+    background: url(/images/webdevelop/mainMedia1.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 1;
+}
+
+.video2 {
+    background: url(/images/webdevelop/mainMedia2.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 1;
+}
+
+.video3 {
+    background: url(/images/webdevelop/mainMedia3.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 1;
+}
+
+.video4 {
+    background: url(/images/webdevelop/mainMedia4.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 1;
+}
+
+.video5 {
+    background: url(/images/webdevelop/mainMedia5.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 1;
+}

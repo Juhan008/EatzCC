@@ -1,0 +1,207 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:insert="~{/basic/header :: headerFragmentHead}"></head>
+
+<head th:insert="~{/basic/footer :: footerFragmentHead}"></head>
+
+<head>
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/riamenu.css" />
+    <meta charset="UTF-8">
+    <title>LOTTE EATZ</title>
+</head>
+
+<body>
+    <div class="all-wrapper">
+        <div th:insert="~{/basic/header :: headerFragment}"></div>
+        <div class="cont-wrapper">
+            <div class="brand-top-title-var">
+                <div class="brand-top-title-name">롯데리아</div>
+                <div class="breadcrumb">
+                    <ol class="breadcrumb-list">
+                        <li class="crumb"><a href="/eatzMain" class="link-home"><span class="offscreen">홈</span></a>
+                        </li>
+                        <li class="crumb">
+                            <span class="menu">브랜드</span>
+                        </li>
+                        <li class="crumb">
+                            <span class="menu">롯데리아</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="var-top"></div>
+            <div class="brandPage-cont">
+                <div class="aside-wrapper">
+                    <div class="brand-aside-img-frame">
+                        <div class="brand-aside-img">
+                            <div class="brand-aside-log-outer">
+                                <div class="brand-aside-log"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="brand-aside-text">
+                        <div class="brand-aside-name">롯데리아</div>
+                        <div class="brand-aside-sub-tit">맛있는 즐거움이 찾아온다!</div>
+                        <div class="brand-aside-sub-comment">LOTTE EATZ에서 빠르고 편리하게 주문하세요.</div>
+                    </div>
+                    <div class="brand-aside-btn-frame">
+                        <a>
+                            <div class="brand-aside-btn-first">
+                                <div class="brand-aside-btn-first-ico"></div>매장찾기
+                            </div>
+                        </a>
+                        <a>
+                            <div class="brand-aside-btn-second">
+                                <div class="brand-aside-btn-second-ico"></div>공유
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="var-side"></div>
+                <div class="brand-menu-wrapper">
+                    <div class="recommend-menu">
+                        <div class="recommend-tit">이런 메뉴는 어떠세요?
+                        </div>
+                        <div class="scroll-container">
+                            <button class="scroll-btn left scroll-brand-menu"></button>
+                            <div class="scrollable-content">
+                                <div class="recommend-menu-frame">
+                                </div>
+                            </div>
+                            <button class="scroll-btn right scroll-brand-menu"></button>
+                        </div>
+                    </div>
+                    <div class="var-mid"></div>
+                    <div class="brand-category">
+                        <div class="category-button-cont">
+                            <button class="category-button">추천메뉴</button>
+                            <button class="category-button">햄버거</button>
+                            <button class="category-button">디저트</button>
+                            <button class="category-button">치킨</button>
+                            <button class="category-button">음료</button>
+                            <button class="category-button">아이스샷</button>
+                        </div>
+                        <div class="output-cont">
+                            <div class="category-name"></div>
+                            <ul class="product-ul">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div th:insert="~{/basic/footer :: footerFragment}"></div>
+        <script src="/scripts/header.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+        <script>
+            function loadHotMenus(brand) {
+                axios.get(`/recommend?brand=${brand}`)
+                    .then(response => {
+                        const menus = response.data;
+                        updateHotMenuDisplay(menus);
+                    })
+                    .catch(error => console.error('Error fetching hot menus', error));
+            }
+
+            function loadMenus(category) {
+                let url;
+                if (category === '추천메뉴') {
+                    
+                    url = `/recommendbtn?brand=롯데리아&hotMenu=추천`;
+                    axios.get(url)
+                        .then(response => {
+                            const menus = response.data;
+                            updateCategoryMenuDisplay(category, menus); // 일반 카테고리 업데이트 함수 호출
+                        })
+                        .catch(error => console.error('Error fetching menus', error));
+                
+                } else {
+                    
+                    url = `/menus?category=${category}`;
+                    axios.get(url)
+                        .then(response => {
+                            const menus = response.data;
+                            updateCategoryMenuDisplay(category, menus); // 일반 카테고리 업데이트 함수 호출
+                        })
+                        .catch(error => console.error('Error fetching menus', error));
+                }
+            }
+
+
+            function updateHotMenuDisplay(menus) {
+                const menuFrame = document.querySelector('.recommend-menu-frame');
+                menuFrame.innerHTML = '';
+
+                menus.forEach(menu => {
+                    const menuDiv = document.createElement('div');
+                    menuDiv.className = 'recommend-menu-frame-outer';
+
+                    menuDiv.innerHTML = `
+                        <div class="recommend-menu-img" style="background-image: url('${menu.image}')"></div>
+                        <div class="recommend-menu-frame-title">${menu.menuName}</div>
+                        <div class="recommend-menu-price">${menu.price}<span class="recommend-menu-unit">원</span></div>
+                    `;
+
+                    menuFrame.appendChild(menuDiv);
+                });
+            }
+
+            function updateCategoryMenuDisplay(category, menus) {
+                document.querySelector('.category-name').textContent = category;
+                const productUl = document.querySelector('.product-ul');
+                productUl.innerHTML = '';
+
+                menus.forEach(menu => {
+                    const menuLi = `
+                        <li class="product-li"><a href="/menu/${menu.id}">
+                            <div class="product-li-img" style="background-image: url('${menu.image}')"></div>
+                            <div class="product-li-name">${menu.menuName}</div>
+                            <div class="product-li-price">${menu.price}<span class="unit">원</span></div>
+                        </a></li>
+                    `;
+                    productUl.innerHTML += menuLi;
+                });
+            }
+
+            document.addEventListener("DOMContentLoaded", function () {
+                loadHotMenus('롯데리아');
+                loadMenus("추천메뉴"); // 페이지 로드 시 "추천메뉴"를 기본값으로 설정
+
+                const categoryButtons = document.querySelectorAll('.category-button');
+                categoryButtons.forEach(button => {
+                    button.addEventListener('click', function () {
+                        loadMenus(this.textContent.trim());
+                    });
+                });
+            });
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // 모든 스크롤 컨테이너를 선택
+                const scrollContainers = document.querySelectorAll('.scroll-container');
+
+                scrollContainers.forEach(container => {
+                    const scrollableContent = container.querySelector('.scrollable-content');
+                    const leftBtn = container.querySelector('.scroll-btn.left');
+                    const rightBtn = container.querySelector('.scroll-btn.right');
+
+                    leftBtn.addEventListener('click', function () {
+                        scrollableContent.scrollBy({ left: -100, behavior: 'smooth' });
+                    });
+
+                    rightBtn.addEventListener('click', function () {
+                        scrollableContent.scrollBy({ left: 100, behavior: 'smooth' });
+                    });
+                });
+            });
+        </script>
+
+    </div>
+</body>
+
+</html>

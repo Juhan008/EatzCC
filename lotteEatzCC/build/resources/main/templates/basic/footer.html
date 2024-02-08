@@ -1,0 +1,110 @@
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="footerFragmentHead">
+	<link rel="stylesheet" href="/styles/footer.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div th:fragment="footerFragment" class="footer-wrapper" data-pc-only="">
+		<div class="footer-inner">
+			<div class="footer-left">
+				<div class="footer-row has-btn">
+					<ul class="footer-menu">
+						<li class="footer-item"><a class="footer-menu-link fw-bold" data-href="/footer/clause/privacy"
+								style="cursor: pointer;">개인정보처리방침</a></li>
+						<li class="footer-item"><a class="footer-menu-link" data-href="/footer/clause/useterm"
+								style="cursor: pointer;">이용약관</a></li>
+						<li class="footer-item"><a class="footer-menu-link" data-href="/footer/clause/location"
+								style="cursor: pointer;">위치기반서비스 이용약관</a></li>
+						<li class="footer-item"><a class="footer-menu-link" data-href="/footer/clause/video"
+								style="cursor: pointer;">영상정보 처리기기 운영 및 관리 방침</a></li>
+						<li class="footer-item"><a class="footer-menu-link" data-href="/board/notice"
+								style="cursor: pointer;">공지사항</a></li>
+						<li class="footer-item"><a class="footer-menu-link" data-href="javascript:goLotteCnsl();"
+								style="cursor: pointer;">창업상담</a></li>
+						<li class="footer-item"><a class="footer-menu-link" data-href="/noti/setting"
+								style="cursor: pointer;">설정</a></li>
+					</ul>
+				</div>
+				<div class="footer-row has-btn">
+					<div class="footer-tit">가맹점 모집</div>
+					<div class="footer-cont">
+						<div class="btn-wrap auto">
+							<a class="btn-sm-ft btn-line-light-gray" data-href="/footer/affilGuideRia"
+								style="cursor: pointer;"><span class="text">롯데리아</span></a>
+							<a class="btn-sm-ft btn-line-light-gray" data-href="/footer/affilGuideAng"
+								style="cursor: pointer;"><span class="text">엔제리너스</span></a>
+							<a class="btn-sm-ft btn-line-light-gray" data-href="javascript:goLotteCnsl('40');"
+								style="cursor: pointer;"><span class="text">크리스피크림 도넛</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="footer-row">
+					<div class="footer-tit">롯데GRS 사업자정보</div>
+					<div class="footer-cont">
+						<div class="footer-info">
+							<div class="info-row">
+								<span class="info">대표자 : 차우철</span>
+								<span class="info">주소 : 서울특별시 금천구 벚꽃로 104 금천 롯데타워</span>
+								<span class="info">사업자번호 : 106-81-23498</span>
+							</div>
+							<div class="info-row">
+								<span class="info">통신판매번호 : 용산 06463</span>
+								<span class="info"><a class="btn-text-underline"
+										data-href="javascript:goLinkPop('https://www.ftc.go.kr/bizCommPop.do?wrkr_no=1068123498', 'Y', 'Y');"
+										style="cursor: pointer;"><span class="text">사업자정보확인</span></a></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-row">
+					<div class="footer-tit">문의처</div>
+					<div class="footer-cont">
+						<div class="footer-info">
+							<div class="info-row">
+								<span class="info">일반문의 : 02-709-1114</span>
+								<span class="info">매장이용불편사항 : 080-550-0005</span>
+								<span class="info">일반쿠폰(기프티엘) : 1644-4276</span>
+							</div>
+							<div class="info-row">
+								<span class="info">구독쿠폰(롯데e커머스) : 1522-2552</span>
+								<span class="info">LOTTE EATZ앱 문의 : 1600-0552</span>
+								<span class="info"><a class="btn-text-underline" data-href="/voc/inquiry"
+										style="cursor: pointer;"><span class="text">고객의소리</span></a></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="copyright-wrap">
+					<div class="copyright">copyright © 2023 Lotte GRS co.,ltd all right reserved</div>
+
+
+
+					<ul class="sns-link-list">
+						<li class="sns-link-item">
+							<button type="button" class="sns-link" data-type="facebook"><i class="ico-sns-facebook"><span
+										class="offscreen">페이스북</span></i></button>
+						</li>
+						<li class="sns-link-item">
+							<button type="button" class="sns-link" data-type="instagram"><i class="ico-sns-instagram"><span
+										class="offscreen">인스타그램</span></i></button>
+						</li>
+						<li class="sns-link-item">
+							<button type="button" class="sns-link" data-type="twitter"><i class="ico-sns-twitter"><span
+										class="offscreen">트위터</span></i></button>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-right">
+				<button type="button" class="btn-md btn-line-light-gray btn-family"
+					onclick="eatzPub.front.dialogOnOff().popOpen('#popLotteFamilySite');">
+					<span class="text">Family Site</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

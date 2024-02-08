@@ -1,0 +1,129 @@
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="headerFragmentHead">
+	<link rel="stylesheet" href="/styles/header.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div th:fragment="headerFragment" id="header">
+		<div class="header-wrapper">
+			<div class="header-top">
+				<ul class="user-menu">
+					<li class="user-item">
+						<a href="" class="user-menu-li">
+							
+							<a th:if="${session.userId == null}" href="/login">로그인</a>
+
+							
+							<form th:if="${session.userId != null}" action="/logout" method="post">
+								<button type="submit">로그아웃</button>
+							</form>
+						</a>
+					</li>
+					<li class="user-item">
+						<a href="" class="user-menu-li">주문/예약 내역</a>
+					</li>
+					<li class="user-item">
+						<a href="" class="user-menu-li">매장찾기</a>
+					</li>
+				</ul>
+			</div>
+			<hr>
+			<div class="header-bottom"><a href="/" class="/main">
+					<h1 class="header-logo">
+						<span class="offscreen">LOTTE EATZ</span>
+					</h1>
+				</a>
+				<ul class="header-deq1">
+					<li class="header-deq2-li">
+						<button type="button" class="header-deq2-btn">브랜드</button>
+						<ul class="header-dep3-menu">
+							<li class="header-dep2">
+								<a href="/brand/lotteria" class="header-deq3-btn">롯데리아</a>
+							</li>
+							<li class="header-dep3">
+								<a href="#" class="header-deq3-btn">엔제리너스</a>
+							</li>
+							<li class="header-dep3">
+								<a href="#" class="header-deq3-btn">크리스피크림</a>
+							</li>
+							<li class="header-dep3">
+								<a href="#" class="header-deq3-btn">플레:이팅</a>
+							</li>
+						</ul>
+					</li>
+					<li class="header-deq2-li">
+						<button type="button" class="header-deq2-btn">이벤트</button>
+						<ul class="header-dep3-menu">
+							<li class="header-dep3">
+								<a href="#" class="header-deq3-btn">이벤트</a>
+							</li>
+							<li class="header-dep3">
+								<a href="#" class="header-deq3-btn">룰렛</a>
+							</li>
+							<li class="header-dep3">
+								<a href="#" class="header-deq3-btn">EATZ TV</a>
+							</li>
+							<li class="header-dep3">
+								<a href="#" class="header-deq3-btn">출석체크</a>
+							</li>
+						</ul>
+					</li>
+					<li class="header-deq2-li">
+						<button type="button" class="header-deq2-btn">스토어</button>
+						<ul class="header-dep3-menu">
+							<li class="header-dep3">
+								<a href="#" class="header-deq3-btn">전체</a>
+							</li>
+							<li class="header-dep3">
+								<a href="#" class="header-deq3-btn">쿠폰</a>
+							</li>
+							<li class="header-dep3">
+								<a href="#" class="header-deq3-btn">EATZ카드</a>
+							</li>
+							<li class="header-dep3">
+								<a href="#" class="header-deq3-btn">쇼핑</a>
+							</li>
+						</ul>
+					</li>
+					<li class="header-deq2-li">
+						<button type="button" class="header-deq2-btn">고객지원</button>
+						<ul class="header-dep3-menu">
+							<li class="header-dep3">
+								<a href="#" class="header-deq3-btn">FAQ</a>
+							</li>
+							<li class="header-dep3">
+								<a href="#" class="header-deq3-btn">공지사항</a>
+							</li>
+							<li class="header-dep3">
+								<a href="#" class="header-deq3-btn">설문조사</a>
+							</li>
+							<li class="header-dep3">
+								<a href="#" class="header-deq3-btn">고객의 소리</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="util-menu">
+					<li class="util-item">
+						<a href="" class="btn-header-cart">
+							<i class="ico-header-cart"><span class="offscreen">장바구니</span></i>
+						</a>
+					</li>
+					<li class="util-item">
+						<a href="" class="btn-header-mypage"><i class="ico-header-cart"><span
+									class="offscreen">장바구니</span></i></a>
+					</li>
+				</ul>
+				<button type="button" class="btn-header-order"></button>
+			</div>
+			<div class="sub-gnb-layer">
+			</div>
+		</div>
+	</div>
+	<script src="/scripts/header.js"></script>
+
+</body>
+
+</html>

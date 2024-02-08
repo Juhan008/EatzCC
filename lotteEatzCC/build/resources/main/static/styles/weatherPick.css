@@ -1,0 +1,116 @@
+.weatherPick-cont {
+    margin-top: 40px;
+    width: 720px;
+}
+
+.weatherPick-img {
+    background-image: url(/images/webdevelop/snow.png);
+    background-size: cover;
+    background-position: -154px 3px;
+    background-repeat: no-repeat;
+    font-weight: 600;
+    color: #000;
+    padding: 1px 0px 0px 0px;
+    
+}
+
+.weatherPick-weather-ment {
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: -0.025em;
+    font-weight: 500;
+    margin-top: 70px;
+}
+
+.weatherPick-default-ment {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: -0.025em;
+}
+
+.weatherPick-menu-row {
+    display: flex;
+    margin-top: 50px;
+}
+
+.weatherPick-menu-row-frame {
+    margin-right: 10px;
+}
+
+.weatherPick-menu-outline {
+    border-radius: 4px;
+    background: #fff;
+    height: 144px;
+    width: 144px;
+    border: 1px solid #EFF1F3;
+}
+
+.weatherPick-menu-img {
+    height: 144px;
+    width: 144px;
+}
+
+.weatherPick-menu-brand {
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.025em;
+    color: #999;
+    margin-top: 5px;
+}
+
+.weatherPick-menu-name {
+    margin-top: 4px;
+    color: #000;
+    font-weight: 500;
+    word-break: keep-all;
+    display: block;
+    overflow: hidden;
+    max-height: 36px;
+    line-height: 18px;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.w-menu1 {
+    background: url(/images/webdevelop/x144.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 1;
+}
+.w-menu2 {
+    background: url(/images/webdevelop/x1441.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 1;
+}
+.w-menu3 {
+    background: url(/images/webdevelop/x1442.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 1;
+}
+.w-menu4 {
+    background: url(/images/webdevelop/x1443.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 1;
+}
+.w-menu5 {
+    background: url(/images/webdevelop/x1444.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 1;
+}
+.w-menu6 {
+    background: url(/images/webdevelop/x1445.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 1;
+}
+.w-menu7 {
+    background: url(/images/webdevelop/x1446.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 1;
+}

@@ -1,0 +1,28 @@
+.menu-info table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.menu-info th, .menu-info td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.menu-info th {
+    background-color: #f2f2f2;
+}
+.menu-info{
+    display: block;
+margin: 1px 0px 0px 0px;
+}
+th{
+    margin: 1px 0px 0px 0px;
+}
+td{
+    margin: 1px 0px 0px 0px;
+}
+.img-view{
+height: 20px;
+width: 20px;
+}

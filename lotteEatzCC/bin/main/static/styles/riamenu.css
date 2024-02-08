@@ -1,0 +1,373 @@
+.cont-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 30px 0px 30px;
+    margin-left: 130px;
+}
+.brand-top-title-var{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 30px 25px 30px 4px;
+    max-width: 1150px;
+}
+.brand-top-title-name{
+    font-size: 26px;
+    line-height: 34px;
+    letter-spacing: -0.025em;
+    font-weight: 600;
+    color: #000;
+    width: auto;
+    min-width: 100px;
+}
+.breadcrumb {
+    margin-left: auto;
+    min-width: 170px;
+}
+.breadcrumb .breadcrumb-list .crumb {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+.breadcrumb .breadcrumb-list .crumb .link-home {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-top: -1px;
+    background: url(/images/webdevelop/comm_ico_breadcrumb_home.svg) 0 0 no-repeat;
+    background-size: cover;
+}
+.offscreen {
+    position: absolute !important;
+    display: block;
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    font-size: 14px !important;
+}
+.breadcrumb .breadcrumb-list .crumb .menu {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.025em;
+    line-height: 16px;
+    color: #666;
+}
+.breadcrumb .breadcrumb-list .crumb ~ .crumb {
+    padding-left: 24px;
+    margin-left: 8px;
+}
+.breadcrumb .breadcrumb-list .crumb ~ .crumb:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    vertical-align: top;
+    width: 16px;
+    height: 16px;
+    background: url(/images/webdevelop/comm_ico_breadcrumb_divide.svg) 0 0 no-repeat;
+    background-size: cover;
+}
+.var-top{
+    background-color: #DDE0E3;
+    height: 1;
+    width: 100%;
+}
+.var-mid{
+    background-color: #DDE0E3;
+    height: 1.5;
+    width: 90%;
+    margin-left: 40px;
+}
+.var-side{
+    background-color: #DDE0E3;
+    height: auto;
+    min-width: 1;
+}
+.brandPage-cont{
+    display: flex;
+
+}
+.aside-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+    padding-top: 40px;
+    height: 500px;
+    position: sticky;
+    top: 0;
+    
+}/*브랜드 배너 색*/
+.brand-aside-img-frame{
+    height: 191px;
+    width: 342px;
+    background-color: #F05042;
+    border-radius: 4px;
+}/*배너 이미지*/
+.brand-aside-img{
+    background: url(/images/webdevelop/ria-side.png);
+    background-size: 342px 191px;
+    height: 191px;
+    width: 342px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    
+}
+.brand-aside-log{
+    width: 84%;
+    height: 84%;
+    background: url(/images/webdevelop/comm_ico_brand_lotteria.png) 0 0 no-repeat #D63731;
+    background-size: cover;
+    border-radius: 40px;
+    
+}
+.brand-aside-log-outer{
+    height: 70px;
+    width: 70px;
+    background-color: #fff;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 15px -35px 0px;
+}
+.brand-aside-text{
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px -34px 0px;
+}
+.brand-aside-name{
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: -0.025em;
+    color: #000;
+    font-weight: 600;
+    margin-top: 30px;
+}
+.brand-aside-sub-tit{
+    margin-top: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.025em;
+    color: #444;
+}
+.brand-aside-btn-frame{
+    display: flex;
+    margin-top: 30px;
+}
+.brand-aside-sub-comment{
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.025em;
+    color: #444;
+    margin-bottom: 30px;
+}
+.brand-aside-btn-frame{
+    display: flex;
+}
+.brand-menu-wrapper{
+    background-color: #f4f4f496;
+    display: flex;
+    flex-direction: column;
+    width: 68%;
+    padding-bottom: 30;
+}
+.recommend-menu{
+    padding: 40px 0 0 40px;
+}
+.recommend-menu-frame{
+    display: flex;
+    margin-bottom: 30;
+}
+.recommend-menu-frame-outer{
+    margin: 20px 15px 0px 0px;
+}
+.recommend-menu-img{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 1;
+    width: 144px;
+    height: 144px;
+    border: 1px solid #EFF1F3;
+    border-radius: 4px;
+    background-color: #fff;
+}
+.recommend-menu-frame-title{
+    white-space: pre-line;
+    word-wrap: break-word;
+    width: 144px;
+    font-weight: 550;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.recommend-tit{
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.025em;
+    font-weight: 600;
+    margin-bottom: 20px
+}
+
+.recommend-menu-unit{
+    margin-right: 2px;
+    font-weight: 550;
+}
+.recommend-menu-price{
+    width: 144px;
+    font-weight: 550;
+}
+a{
+    color: #000;
+}
+a:visited{
+    color: #000;
+}
+.brand-aside-btn-first{
+    background-color: #fff;
+    border: 1px solid #80878D;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.025em;
+    height: 44px;
+    width: 168px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.brand-aside-btn-second{
+    background-color: #fff;
+    border: 1px solid #80878D;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.025em;
+    height: 44px;
+    width: 168px;
+    margin-left: 6px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.brand-aside-btn-first-ico{
+    width: 16px;
+    height: 16px;
+    background: url(/images/webdevelop/comm_btn_ico_search.svg) 0 0 no-repeat;
+    background-size: cover;
+}
+.brand-aside-btn-second-ico{
+    width: 16px;
+    height: 16px;
+    background: url(/images/webdevelop/comm_ico_store_share.svg) 0 0 no-repeat;
+    background-size: cover;
+}
+a,button{
+    cursor: pointer;
+}
+.scrollable-content {
+    overflow-x: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 765px;
+}
+.brand-aside-btn-first:hover,.brand-aside-btn-second:hover{
+    background-color: #eff1f3;
+}
+.scroll-btn.left.scroll-brand-menu {
+    margin: -50px 0px 0px -20px;
+}
+
+.scroll-btn.right.scroll-brand-menu {
+    margin: -30px 30px 0px 0px;
+}
+.brand-category{
+    margin: 40px 0px 0px 40px;
+}
+.category-button{
+    height: 32px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    border-radius: 4px;
+    background: rgba(221, 224, 227, 0.4);
+    border: 2px solid rgba(221, 224, 227, 0.4);
+    background-clip: padding-box;
+    color: #666;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.025em;
+    margin-bottom: 30px;
+}
+.output-cont{
+    position: relative;
+    min-height: 500px;
+    margin-right: 40px;
+}
+.category-name{
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #000;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.025em;
+}
+.product-ul{
+    margin: 0 -5px;
+    display: flex;
+    flex-wrap: wrap; 
+}
+.product-li{
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    position: relative;
+}
+.product-li-img{
+    position: relative;
+    border: 1px solid #EFF1F3;
+    border-radius: 4px;
+    background: #fff;
+    padding-top: calc(100% - 2px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+.product-li-name{
+    color: #000;
+    font-weight: 500;
+    word-break: keep-all;
+    display: block;
+    overflow: hidden;
+    max-height: 36px;
+    line-height: 18px;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+.product-li-price{
+    margin-top: 6px;
+    color: #000;
+    font-weight: 600;
+}
+.unit{
+    color: #000;
+    font-weight: 600;
+    margin-left: 2px;
+}
+.product-ul .product-li:nth-child(n+4) {
+    margin-top: 30px;
+}
